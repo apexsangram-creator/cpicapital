@@ -1724,47 +1724,1067 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
   </section>
 
   
-  <div data-scroll="" class="numbers ">
+  <!-- Numbers & Investment Options Section -->
+  <style>
+    .numbers {
+      position: relative;
+      background: #141724;
+      padding: 90px 0 110px;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .numbers__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.25;
+    }
+
+    .numbers__bg-img {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .numbers__content {
+      position: relative;
+      z-index: 2;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      transform: none !important;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    /* CPI Opportunity Cards Grid */
+    .cpi-opp-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .cpi-opp-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 20px 16px 22px 16px;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+      box-sizing: border-box;
+    }
+
+    .cpi-opp-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35), 0 0 25px rgba(0, 223, 216, 0.25);
+    }
+
+    /* Small, Compact Rounded Pill at Top */
+    .cpi-opp-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: #192048;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 12px rgba(25, 32, 72, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      transition: all 0.35s ease;
+      margin-bottom: 14px;
+      max-width: 95%;
+      z-index: 2;
+    }
+
+    .cpi-opp-card:hover .cpi-opp-pill {
+      background: #4A517F;
+      box-shadow: 0 6px 18px rgba(74, 81, 127, 0.45);
+      transform: scale(1.04);
+    }
+
+    .cpi-opp-pill span {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      line-height: 125%;
+      color: #ffffff;
+      letter-spacing: 0.01em;
+    }
+
+    .cpi-opp-card-body {
+      position: relative;
+      width: 100%;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    .cpi-opp-watermark {
+      position: absolute;
+      inset: -20px;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+      transition: transform 0.6s ease, opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .cpi-opp-card:hover .cpi-opp-watermark {
+      transform: scale(1.1);
+      opacity: 0.2;
+    }
+
+    .cpi-opp-icon {
+      position: relative;
+      z-index: 2;
+      width: 110px;
+      height: 88px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.35s ease;
+    }
+
+    .cpi-opp-card:hover .cpi-opp-icon {
+      transform: scale(1.08);
+    }
+
+    .cpi-opp-icon svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.08));
+    }
+
+    @media (max-width: 1100px) {
+      .cpi-opp-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cpi-opp-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <div data-scroll="" class="numbers">
     <div class="numbers__bg">
       <div class="numbers__bg-img" style="background-image: url(images/numbers.jpg);"></div>
     </div>
     <div class="numbers__content">
 
-      
-      <div class="numbers__wrap">
-        <div class="numbers__item">
-          <div class="numbers__item-title">Portfolio Estimated Completion Value¹
-</div>
-          <div class="numbers__item-count">$45B+
-</div>
-        </div>
-        <div class="numbers__item">
-          <div class="numbers__item-title">Square Feet of Projected Density
-</div>
-          <div class="numbers__item-count">80M+
-</div>
-        </div>
-        <div class="numbers__item">
-          <div class="numbers__item-title">Residential Units
-</div>
-          <div class="numbers__item-count">50,000+
-</div>
-        </div>
+      <!-- 4 Investment Opportunity Asset Classes Grid -->
+      <div class="cpi-opp-grid">
+        <!-- Card 1 -->
+        <a href="#" class="cpi-opp-card">
+          <div class="cpi-opp-pill">
+            <span>Multifamily</span>
+          </div>
+          <div class="cpi-opp-card-body">
+            <div class="cpi-opp-watermark" style="background-image: url(images/slide/bluewater-aprtment.jpg.webp);"></div>
+            <div class="cpi-opp-icon">
+              <!-- Multifamily Townhouse SVG -->
+              <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 32L26 14L42 32H10Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M37 32L53 14L69 32H37Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M64 32L80 14L96 32H64Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="14" y="32" width="78" height="40" fill="#192048" rx="2"/>
+                <rect x="22" y="38" width="8" height="8" fill="#ffffff" rx="1"/>
+                <rect x="36" y="38" width="8" height="8" fill="#ffffff" rx="1"/>
+                <rect x="49" y="38" width="8" height="8" fill="#ffffff" rx="1"/>
+                <rect x="62" y="38" width="8" height="8" fill="#ffffff" rx="1"/>
+                <rect x="76" y="38" width="8" height="8" fill="#ffffff" rx="1"/>
+                <rect x="22" y="52" width="8" height="12" fill="#00c49f" rx="1"/>
+                <rect x="36" y="52" width="8" height="12" fill="#00c49f" rx="1"/>
+                <rect x="49" y="52" width="8" height="12" fill="#00c49f" rx="1"/>
+                <rect x="62" y="52" width="8" height="12" fill="#00c49f" rx="1"/>
+                <rect x="76" y="52" width="8" height="12" fill="#00c49f" rx="1"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="#" class="cpi-opp-card">
+          <div class="cpi-opp-pill">
+            <span>Build To Rent (BTR-SFR)</span>
+          </div>
+          <div class="cpi-opp-card-body">
+            <div class="cpi-opp-watermark" style="background-image: url(images/slide/apollo-oaks.jpg.webp);"></div>
+            <div class="cpi-opp-icon">
+              <!-- Cluster of Single Family Homes SVG -->
+              <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 8L32 24H68L50 8Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="37" y="24" width="26" height="24" fill="#ffffff" stroke="#192048" stroke-width="2.5"/>
+                <rect x="46" y="32" width="8" height="16" fill="#192048"/>
+                <rect x="40" y="28" width="4" height="4" fill="#00c49f"/>
+                <rect x="56" y="28" width="4" height="4" fill="#00c49f"/>
+                <path d="M26 30L10 44H42L26 30Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="15" y="44" width="22" height="24" fill="#ffffff" stroke="#192048" stroke-width="2.5"/>
+                <rect x="22" y="52" width="8" height="16" fill="#192048"/>
+                <path d="M74 30L58 44H90L74 30Z" fill="#00c49f" stroke="#192048" stroke-width="2.5" stroke-linejoin="round"/>
+                <rect x="63" y="44" width="22" height="24" fill="#ffffff" stroke="#192048" stroke-width="2.5"/>
+                <rect x="70" y="52" width="8" height="16" fill="#192048"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="#" class="cpi-opp-card">
+          <div class="cpi-opp-pill">
+            <span>CPI US Multifamily Fund</span>
+          </div>
+          <div class="cpi-opp-card-body">
+            <div class="cpi-opp-watermark" style="background-image: url(images/slide/bluewater-aprtment2.jpg.webp);"></div>
+            <div class="cpi-opp-icon">
+              <!-- US & Canadian Flags + Fund Building SVG -->
+              <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="62" y="8" width="20" height="12" fill="#ffffff" stroke="#192048" stroke-width="1.5" rx="1"/>
+                <rect x="62" y="8" width="5" height="12" fill="#e11d48"/>
+                <rect x="77" y="8" width="5" height="12" fill="#e11d48"/>
+                <path d="M72 11L73 14H75L73.5 15.5L74 18L72 16.5L70 18L70.5 15.5L69 14H71L72 11Z" fill="#e11d48"/>
+
+                <rect x="18" y="18" width="20" height="12" fill="#ffffff" stroke="#192048" stroke-width="1.5" rx="1"/>
+                <rect x="18" y="18" width="8" height="6" fill="#192048"/>
+                <line x1="26" y1="20" x2="38" y2="20" stroke="#e11d48" stroke-width="1.5"/>
+                <line x1="26" y1="23" x2="38" y2="23" stroke="#e11d48" stroke-width="1.5"/>
+                <line x1="18" y1="26" x2="38" y2="26" stroke="#e11d48" stroke-width="1.5"/>
+                <line x1="18" y1="29" x2="38" y2="29" stroke="#e11d48" stroke-width="1.5"/>
+
+                <circle cx="56" cy="18" r="7" fill="#00c49f" stroke="#192048" stroke-width="1.5"/>
+                <text x="53.5" y="21.5" font-family="WorkSans, sans-serif" font-size="8" font-weight="bold" fill="#ffffff">$</text>
+
+                <rect x="26" y="36" width="48" height="34" fill="#192048" rx="2"/>
+                <rect x="38" y="28" width="24" height="42" fill="#192048" rx="2"/>
+                <rect x="30" y="42" width="4" height="5" fill="#ffffff"/>
+                <rect x="30" y="52" width="4" height="5" fill="#ffffff"/>
+                <rect x="42" y="34" width="4" height="5" fill="#00c49f"/>
+                <rect x="50" y="34" width="4" height="5" fill="#00c49f"/>
+                <rect x="42" y="44" width="4" height="5" fill="#ffffff"/>
+                <rect x="50" y="44" width="4" height="5" fill="#ffffff"/>
+                <rect x="42" y="54" width="4" height="5" fill="#ffffff"/>
+                <rect x="50" y="54" width="4" height="5" fill="#ffffff"/>
+                <rect x="66" y="42" width="4" height="5" fill="#ffffff"/>
+                <rect x="66" y="52" width="4" height="5" fill="#ffffff"/>
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="#" class="cpi-opp-card">
+          <div class="cpi-opp-pill">
+            <span>Private Debt Fund</span>
+          </div>
+          <div class="cpi-opp-card-body">
+            <div class="cpi-opp-watermark" style="background-image: url(images/slide/apollo-oaks3.jpg.webp);"></div>
+            <div class="cpi-opp-icon">
+              <!-- Hand Holding Money Bag SVG -->
+              <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46 14L50 8L54 14L58 10L56 16H44L42 10L46 14Z" fill="#00c49f" stroke="#192048" stroke-width="1.5"/>
+                <path d="M40 22C40 18 45 16 50 16C55 16 60 18 60 22L65 38C65 44 59 47 50 47C41 47 35 44 35 38L40 22Z" fill="#00c49f" stroke="#192048" stroke-width="2"/>
+                <circle cx="50" cy="32" r="6" fill="#ffffff"/>
+                <text x="47" y="35" font-family="WorkSans, sans-serif" font-size="8" font-weight="bold" fill="#192048">$</text>
+
+                <circle cx="34" cy="28" r="6" fill="#00DFD8" stroke="#192048" stroke-width="1.5"/>
+                <text x="31" y="31" font-family="WorkSans, sans-serif" font-size="7" font-weight="bold" fill="#192048">%</text>
+
+                <path d="M20 54L38 48C42 46 48 48 52 52L62 52C66 52 70 48 74 46L82 46C82 50 78 54 72 58L58 64C50 67 42 66 36 62L20 54Z" fill="#192048"/>
+                <rect x="14" y="52" width="10" height="14" rx="2" fill="#192048"/>
+              </svg>
+            </div>
+          </div>
+        </a>
       </div>
 
-      
-      <p class="numbers__text">¹ Represents the realized gross sellout value of completed projects, the forecasted gross sellout value<br>
-of active projects + the realized or forecasted exit value of operating assets
-</p>
-
-      
     </div>
   </div>
 
+  <!-- CPI Capital Investment Advantage Section -->
+  <style>
+    .cpi-advantage-section {
+      width: 100%;
+      background: #ffffff;
+      padding: 100px 0 110px;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
 
+    .cpi-advantage-container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
+    .cpi-advantage-header {
+      text-align: center;
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
 
+    .cpi-advantage-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 9999px;
+      background: rgba(74, 81, 127, 0.08);
+      border: 1px solid rgba(74, 81, 127, 0.2);
+    }
 
+    .cpi-advantage-badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #4A517F;
+      box-shadow: 0 0 8px rgba(74, 81, 127, 0.6);
+    }
+
+    .cpi-advantage-badge-text {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #4A517F;
+    }
+
+    .cpi-advantage-title {
+      font-family: 'TTRamillas', serif;
+      font-size: 2.75rem;
+      line-height: 120%;
+      color: #1b1e2e;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .cpi-advantage-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 24px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .cpi-adv-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 38px 20px 32px;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .cpi-adv-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 223, 216, 0.05) 0%, rgba(74, 81, 127, 0.03) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+    }
+
+    .cpi-adv-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 18px 40px rgba(74, 81, 127, 0.14), 0 0 20px rgba(0, 223, 216, 0.2);
+      border-color: rgba(0, 223, 216, 0.4);
+    }
+
+    .cpi-adv-card:hover::before {
+      opacity: 1;
+    }
+
+    .cpi-adv-icon-wrap {
+      position: relative;
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: #f4f6fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.03);
+    }
+
+    .cpi-adv-card:hover .cpi-adv-icon-wrap {
+      background: #ffffff;
+      transform: scale(1.1) rotate(4deg);
+      box-shadow: 0 10px 25px rgba(0, 223, 216, 0.3), inset 0 0 0 1px rgba(0, 223, 216, 0.3);
+    }
+
+    .cpi-adv-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+    }
+
+    .cpi-adv-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.06));
+    }
+
+    .cpi-adv-title {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 140%;
+      color: #1b1e2e;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      transition: color 0.3s ease;
+    }
+
+    .cpi-adv-card:hover .cpi-adv-title {
+      color: #4A517F;
+    }
+
+    @media (max-width: 1100px) {
+      .cpi-advantage-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cpi-advantage-section {
+        padding: 70px 0 80px;
+      }
+      .cpi-advantage-title {
+        font-size: 2rem;
+      }
+      .cpi-advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .cpi-adv-card {
+        padding: 28px 16px 24px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .cpi-advantage-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <section class="cpi-advantage-section">
+    <div class="cpi-advantage-container">
+      <div class="cpi-advantage-header">
+        <div class="cpi-advantage-badge">
+          <span class="cpi-advantage-badge-dot"></span>
+          <span class="cpi-advantage-badge-text">The CPI Edge</span>
+        </div>
+        <h2 class="cpi-advantage-title">CPI Capital Investment Advantage</h2>
+      </div>
+
+      <div class="cpi-advantage-grid">
+        <!-- 1. Simplified passive investing -->
+        <div class="cpi-adv-card">
+          <div class="cpi-adv-icon-wrap">
+            <div class="cpi-adv-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Person -->
+                <circle cx="26" cy="18" r="8" stroke="#192048" stroke-width="2.5" fill="#ffffff"/>
+                <path d="M12 44C12 36.268 18.268 30 26 30C29.2 30 32.1 31.1 34.4 32.9" stroke="#192048" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Money Bag -->
+                <path d="M42 28L47 28M44.5 28L44.5 25" stroke="#192048" stroke-width="2" stroke-linecap="round"/>
+                <path d="M44.5 28C40 28 36 33 36 39C36 45 39.5 47 44.5 47C49.5 47 53 45 53 39C53 33 49 28 44.5 28Z" fill="#00c49f" stroke="#192048" stroke-width="2.5"/>
+                <text x="41.5" y="42" font-family="WorkSans, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">$</text>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-adv-title">Simplified passive investing</h3>
+        </div>
+
+        <!-- 2. Value-add opportunities -->
+        <div class="cpi-adv-card">
+          <div class="cpi-adv-icon-wrap">
+            <div class="cpi-adv-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Hardhat -->
+                <path d="M16 30C16 20.059 23.163 12 32 12C40.837 12 48 20.059 48 30V32H16V30Z" fill="#00c49f" stroke="#192048" stroke-width="2.5"/>
+                <path d="M12 32H52C53.1046 32 54 32.8954 54 34V35C54 36.1046 53.1046 37 52 37H12C10.8954 37 10 36.1046 10 35V34C10 32.8954 10.8954 32 12 32Z" fill="#192048"/>
+                <path d="M30 13V24H34V13" fill="#ffffff"/>
+                <!-- Wrench -->
+                <path d="M18 45L22 49L38 49L42 45M20 47L40 47" stroke="#192048" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 43C16 43 14 47 18 51C22 55 26 53 26 53" stroke="#192048" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M48 43C48 43 50 47 46 51C42 55 38 53 38 53" stroke="#192048" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-adv-title">Value-add opportunities</h3>
+        </div>
+
+        <!-- 3. Ground-up Development Opportunities -->
+        <div class="cpi-adv-card">
+          <div class="cpi-adv-icon-wrap">
+            <div class="cpi-adv-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Pie Chart Base -->
+                <ellipse cx="32" cy="46" rx="20" ry="7" fill="#00c49f" stroke="#192048" stroke-width="2"/>
+                <path d="M12 46V50C12 53.866 20.954 57 32 57C43.046 57 52 53.866 52 50V46" stroke="#192048" stroke-width="2"/>
+                <!-- Growth Chart Bars -->
+                <rect x="34" y="24" width="6" height="18" fill="#ffffff" stroke="#192048" stroke-width="2"/>
+                <rect x="42" y="16" width="6" height="26" fill="#00c49f" stroke="#192048" stroke-width="2"/>
+                <!-- Growth Figure / Upward Indicator -->
+                <circle cx="22" cy="18" r="4" fill="#ffffff" stroke="#192048" stroke-width="2"/>
+                <path d="M22 23V35M16 27L22 25L28 27M22 35L17 44M22 35L27 44" stroke="#192048" stroke-width="2" stroke-linecap="round"/>
+                <!-- Ascending Arrow -->
+                <path d="M38 12L48 10L46 20" stroke="#00c49f" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-adv-title">Ground-up Development Opportunities</h3>
+        </div>
+
+        <!-- 4. Reliable passive income -->
+        <div class="cpi-adv-card">
+          <div class="cpi-adv-icon-wrap">
+            <div class="cpi-adv-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Circular Cashflow Arrows -->
+                <path d="M18 24C20 16 27 12 36 12C44 12 51 17 53 25" stroke="#192048" stroke-width="2" stroke-linecap="round"/>
+                <path d="M15 22L18 25L22 20" stroke="#192048" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Money Bag -->
+                <path d="M36 18L40 18M38 18V15" stroke="#192048" stroke-width="2"/>
+                <path d="M38 18C34 18 30 22 30 27C30 32 33 34 38 34C43 34 46 32 46 27C46 22 42 18 38 18Z" fill="#00c49f" stroke="#192048" stroke-width="2.5"/>
+                <text x="35.5" y="29.5" font-family="WorkSans, sans-serif" font-size="8" font-weight="bold" fill="#ffffff">$</text>
+                <!-- Hand Supporting -->
+                <path d="M14 42L26 38C29 37 34 38 37 41L45 41C48 41 51 38 54 36L60 36C60 39 57 42 52 45L42 50C36 52 30 51 26 48L14 42Z" fill="#192048"/>
+                <rect x="10" y="40" width="7" height="11" rx="1.5" fill="#192048"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-adv-title">Reliable passive income</h3>
+        </div>
+
+        <!-- 5. Tax-efficient investments -->
+        <div class="cpi-adv-card">
+          <div class="cpi-adv-icon-wrap">
+            <div class="cpi-adv-icon">
+              <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Document Page -->
+                <rect x="14" y="10" width="28" height="38" rx="3" fill="#ffffff" stroke="#192048" stroke-width="2.5"/>
+                <!-- Chart on doc -->
+                <rect x="18" y="24" width="3" height="10" fill="#192048"/>
+                <rect x="23" y="18" width="3" height="16" fill="#00c49f"/>
+                <rect x="28" y="28" width="3" height="6" fill="#192048"/>
+                <rect x="18" y="38" width="16" height="2.5" fill="#192048" rx="1"/>
+                <!-- Percentage Badge Magnifier / Shield -->
+                <circle cx="42" cy="38" r="10" fill="#00c49f" stroke="#192048" stroke-width="2.5"/>
+                <text x="37" y="42" font-family="WorkSans, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">%</text>
+                <path d="M49 45L56 52" stroke="#192048" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-adv-title">Tax-efficient investments</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Process Section with Vibrant Mix-Blend Aurora Glass Effect -->
+  <style>
+    .cpi-process-section {
+      width: 100%;
+      background: #080a14;
+      color: #ffffff;
+      padding: 120px 0 130px;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Vibrant Multi-Color Flowing Mesh Gradient Blobs */
+    .cpi-process-bg-waves {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .cpi-proc-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.55;
+      mix-blend-mode: screen;
+      animation: cpi-proc-drift 18s ease-in-out infinite alternate;
+    }
+
+    .cpi-proc-blob-1 {
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #00DFD8 0%, rgba(0, 223, 216, 0) 70%);
+      top: -100px;
+      left: -80px;
+      animation-duration: 16s;
+    }
+
+    .cpi-proc-blob-2 {
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, #7928CA 0%, rgba(121, 40, 202, 0) 70%);
+      bottom: -120px;
+      right: -80px;
+      animation-duration: 20s;
+      animation-delay: -4s;
+    }
+
+    .cpi-proc-blob-3 {
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, #FF0080 0%, rgba(255, 0, 128, 0) 70%);
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-duration: 22s;
+      animation-delay: -8s;
+      opacity: 0.35;
+    }
+
+    .cpi-proc-blob-4 {
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, #4A517F 0%, rgba(74, 81, 127, 0) 70%);
+      bottom: 10%;
+      left: 15%;
+      animation-duration: 18s;
+      animation-delay: -6s;
+      opacity: 0.45;
+    }
+
+    @keyframes cpi-proc-drift {
+      0% {
+        transform: translate(0px, 0px) scale(1) rotate(0deg);
+      }
+      50% {
+        transform: translate(45px, -35px) scale(1.12) rotate(15deg);
+      }
+      100% {
+        transform: translate(-40px, 40px) scale(0.92) rotate(-10deg);
+      }
+    }
+
+    .cpi-process-container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .cpi-process-header {
+      text-align: center;
+      margin-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .cpi-process-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 9999px;
+      background: rgba(0, 223, 216, 0.12);
+      border: 1px solid rgba(0, 223, 216, 0.3);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .cpi-process-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #00DFD8;
+      box-shadow: 0 0 10px #00DFD8;
+    }
+
+    .cpi-process-badge-text {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #00DFD8;
+    }
+
+    .cpi-process-title {
+      font-family: 'TTRamillas', serif;
+      font-size: 3rem;
+      line-height: 115%;
+      color: #ffffff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 400;
+      text-shadow: 0 4px 25px rgba(0, 223, 216, 0.2);
+    }
+
+    .cpi-process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      width: 100%;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* Continuous Glowing Light-Beam Connecting Line */
+    .cpi-process-connector-line {
+      position: absolute;
+      top: 86px;
+      left: 12%;
+      right: 12%;
+      height: 3px;
+      background: rgba(0, 223, 216, 0.2);
+      z-index: 1;
+      pointer-events: none;
+      border-radius: 9999px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 223, 216, 0.3);
+    }
+
+    .cpi-process-connector-line::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, 
+        transparent 0%, 
+        #00DFD8 40%, 
+        #ffffff 50%, 
+        #00DFD8 60%, 
+        transparent 100%
+      );
+      box-shadow: 0 0 20px #00DFD8, 0 0 35px #00DFD8;
+      animation: cpi-laser-flow 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes cpi-laser-flow {
+      0% {
+        left: -60%;
+      }
+      100% {
+        left: 120%;
+      }
+    }
+
+    /* Glassmorphic Step Cards */
+    .cpi-proc-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: rgba(18, 22, 38, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-radius: 26px;
+      padding: 40px 24px 34px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .cpi-proc-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0, 223, 216, 0.12) 0%, rgba(121, 40, 202, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.45s ease;
+      pointer-events: none;
+    }
+
+    .cpi-proc-card:hover {
+      transform: translateY(-12px);
+      border-color: rgba(0, 223, 216, 0.5);
+      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.5), 0 0 35px rgba(0, 223, 216, 0.28);
+    }
+
+    .cpi-proc-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Glowing Orb Icon Pod */
+    .cpi-proc-icon-wrap {
+      position: relative;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(74, 81, 127, 0.35) 0%, rgba(18, 22, 38, 0.7) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 26px 0;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cpi-proc-card:hover .cpi-proc-icon-wrap {
+      transform: scale(1.12);
+      background: linear-gradient(135deg, rgba(0, 223, 216, 0.25) 0%, rgba(121, 40, 202, 0.35) 100%);
+      border-color: #00DFD8;
+      box-shadow: 0 0 30px rgba(0, 223, 216, 0.45);
+    }
+
+    .cpi-proc-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+    }
+
+    .cpi-proc-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: #ffffff;
+      stroke-width: 2;
+      transition: all 0.35s ease;
+    }
+
+    .cpi-proc-card:hover .cpi-proc-icon svg {
+      stroke: #00DFD8;
+      filter: drop-shadow(0 0 8px rgba(0, 223, 216, 0.6));
+    }
+
+    .cpi-proc-name {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0 0 14px 0;
+      position: relative;
+      z-index: 2;
+      transition: color 0.35s ease;
+    }
+
+    .cpi-proc-card:hover .cpi-proc-name {
+      color: #00DFD8;
+    }
+
+    .cpi-proc-desc {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.92rem;
+      line-height: 160%;
+      color: rgba(255, 255, 255, 0.75);
+      margin: 0;
+      position: relative;
+      z-index: 2;
+      font-weight: 400;
+    }
+
+    @media (max-width: 1100px) {
+      .cpi-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+      .cpi-process-connector-line {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cpi-process-section {
+        padding: 75px 0 85px;
+      }
+      .cpi-process-title {
+        font-size: 2.2rem;
+      }
+      .cpi-process-grid {
+        grid-template-columns: 1fr;
+      }
+      .cpi-proc-card {
+        padding: 32px 20px 28px;
+      }
+    }
+  </style>
+
+  <section class="cpi-process-section">
+    <!-- Animated Flowing Mesh Gradient Blobs -->
+    <div class="cpi-process-bg-waves" aria-hidden="true">
+      <div class="cpi-proc-blob cpi-proc-blob-1"></div>
+      <div class="cpi-proc-blob cpi-proc-blob-2"></div>
+      <div class="cpi-proc-blob cpi-proc-blob-3"></div>
+      <div class="cpi-proc-blob cpi-proc-blob-4"></div>
+    </div>
+
+    <div class="cpi-process-container">
+      <div class="cpi-process-header">
+        <div class="cpi-process-badge">
+          <span class="cpi-process-badge-dot"></span>
+          <span class="cpi-process-badge-text">How It Works</span>
+        </div>
+        <h2 class="cpi-process-title">The Process</h2>
+      </div>
+
+      <div class="cpi-process-grid">
+        <!-- Always Lighting Up Animated Connection Beam Line -->
+        <div class="cpi-process-connector-line" aria-hidden="true"></div>
+
+        <!-- Step 1: SIGN UP -->
+        <div class="cpi-proc-card">
+          <div class="cpi-proc-icon-wrap">
+            <div class="cpi-proc-icon">
+              <!-- Sign up document & pen SVG -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 2V8H20" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 13H8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 17H8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10 9H8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-proc-name">Sign Up</h3>
+          <p class="cpi-proc-desc">
+            Join our exclusive Investor Club to get access to future opportunities
+          </p>
+        </div>
+
+        <!-- Step 2: CONNECT -->
+        <div class="cpi-proc-card">
+          <div class="cpi-proc-icon-wrap">
+            <div class="cpi-proc-icon">
+              <!-- Connect Chat Dialog SVG -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 15C21 15.5304 20.7893 16.0391 20.4142 16.4142C20.0391 16.7893 19.5304 17 19 17H7L3 21V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V15Z" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 9H16" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8 13H13" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-proc-name">Connect</h3>
+          <p class="cpi-proc-desc">
+            Discuss your investment goals to find suitable opportunities
+          </p>
+        </div>
+
+        <!-- Step 3: INVEST -->
+        <div class="cpi-proc-card">
+          <div class="cpi-proc-icon-wrap">
+            <div class="cpi-proc-icon">
+              <!-- Real Estate Skyline SVG -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 21H21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 21V7L13 3V21" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M19 21V11L13 7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 9V9.01" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 13V13.01" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 17V17.01" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-proc-name">Invest</h3>
+          <p class="cpi-proc-desc">
+            When you're ready to invest, we'll help you every step of the way
+          </p>
+        </div>
+
+        <!-- Step 4: ENJOY -->
+        <div class="cpi-proc-card">
+          <div class="cpi-proc-icon-wrap">
+            <div class="cpi-proc-icon">
+              <!-- Island / Sun / Cashflow relaxation SVG -->
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Sun -->
+                <circle cx="18" cy="6" r="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Palm Tree -->
+                <path d="M11 18C11 14 13 10 16 9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 9C14 7 12 7 11 8C10 7 8 7 7 9" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16 9C17 7 19 8 20 10C19 11 18 11 16 11" stroke-linecap="round" stroke-linejoin="round"/>
+                <!-- Island / Water Waves -->
+                <path d="M2 19C5 18 7 20 10 19C13 18 16 20 19 19C20.5 18.5 21.5 19 22 19" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 22C6 21.5 8 22.5 10 22C12 21.5 14 22.5 16 22C18 21.5 20 22.5 22 22" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+          <h3 class="cpi-proc-name">Enjoy</h3>
+          <p class="cpi-proc-desc">
+            Monthly cash flow distributions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <div data-scroll="block-action" class="full full_style-one  full_size-one  new-popup-trigger">
     <div class="full__bg">
