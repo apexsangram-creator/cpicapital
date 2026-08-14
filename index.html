@@ -2089,11 +2089,162 @@ Through disciplined origination and long-standing industry relationships, we sou
     </div>
   </div>
 
-  
+  <!-- Brands Auto Scroller Section -->
+  <style>
+    .cpi-brands-scroller-section {
+      width: 100%;
+      background: #fbfbfb;
+      padding: 70px 0 80px;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+    }
 
+    .cpi-brands-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
 
+    .cpi-brands-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
+    .cpi-brands-subtitle {
+      display: inline-block;
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #4A517F;
+      margin-bottom: 8px;
+    }
 
+    .cpi-brands-title {
+      font-family: 'TTRamillas', serif;
+      font-size: 2.1rem;
+      line-height: 120%;
+      color: #232323;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .cpi-brands-marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      padding: 10px 0;
+    }
+
+    .cpi-brands-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: cpi-brands-marquee 24s linear infinite;
+    }
+
+    .cpi-brands-track:hover {
+      animation-play-state: paused;
+    }
+
+    .cpi-brand-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 55px;
+      height: 110px;
+      transition: transform 0.3s ease;
+    }
+
+    .cpi-brand-item img {
+      max-height: 80px;
+      max-width: 240px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.75);
+      transition: all 0.35s ease;
+    }
+
+    .cpi-brand-item:hover img {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.08);
+    }
+
+    @keyframes cpi-brands-marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-33.333333%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cpi-brands-scroller-section {
+        padding: 50px 0 55px;
+      }
+      .cpi-brands-header {
+        margin-bottom: 28px;
+      }
+      .cpi-brands-title {
+        font-size: 1.6rem;
+      }
+      .cpi-brand-item {
+        padding: 0 28px;
+        height: 75px;
+      }
+      .cpi-brand-item img {
+        max-height: 48px;
+        max-width: 150px;
+      }
+    }
+  </style>
+
+  <div class="cpi-brands-scroller-section">
+    <div class="cpi-brands-container">
+      <div class="cpi-brands-header">
+        <span class="cpi-brands-subtitle">As Seen On</span>
+        <h3 class="cpi-brands-title">Featured In Top Publications</h3>
+      </div>
+      <div class="cpi-brands-marquee-wrapper">
+        <div class="cpi-brands-track">
+          <!-- Set 1 -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+
+          <!-- Set 2 (for seamless infinite loop) -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+
+          <!-- Set 3 (ensuring full coverage on ultrawide monitors) -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <footer data-scroll="footer" id="footer" class="footer">
   <div class="footer__bg">
