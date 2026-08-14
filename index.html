@@ -799,6 +799,531 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 
   </div>
 
+  <!-- Voice of CEO Section -->
+  <style>
+    .cpi-ceo-section {
+      width: 100%;
+      background: #080a12;
+      color: #ffffff;
+      padding: 120px 0 130px;
+      position: relative;
+      overflow: hidden;
+      box-sizing: border-box;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    /* Vibrant Wavy Flowing Animated Mesh Gradient Blobs */
+    .cpi-ceo-bg-waves {
+      position: absolute;
+      inset: -40%;
+      width: 180%;
+      height: 180%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+      filter: blur(80px);
+      opacity: 0.85;
+      mix-blend-mode: screen;
+    }
+
+    .cpi-wave-blob {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .cpi-wave-blob-1 {
+      width: 650px;
+      height: 650px;
+      top: 20%;
+      right: 15%;
+      background: radial-gradient(circle, #7928CA 0%, #4A517F 45%, transparent 70%);
+      animation: cpi-wave-float-1 14s infinite ease-in-out alternate;
+    }
+
+    .cpi-wave-blob-2 {
+      width: 700px;
+      height: 700px;
+      bottom: 10%;
+      left: 10%;
+      background: radial-gradient(circle, #00DFD8 0%, #0070F3 50%, transparent 70%);
+      animation: cpi-wave-float-2 18s infinite ease-in-out alternate;
+    }
+
+    .cpi-wave-blob-3 {
+      width: 550px;
+      height: 550px;
+      top: 10%;
+      left: 30%;
+      background: radial-gradient(circle, #FF0080 0%, #7928CA 55%, transparent 75%);
+      animation: cpi-wave-float-3 16s infinite ease-in-out alternate;
+    }
+
+    .cpi-wave-blob-4 {
+      width: 600px;
+      height: 600px;
+      bottom: 20%;
+      right: 25%;
+      background: radial-gradient(circle, #4A517F 0%, #38ef7d 50%, transparent 75%);
+      animation: cpi-wave-float-1 20s infinite ease-in-out alternate-reverse;
+    }
+
+    @keyframes cpi-wave-float-1 {
+      0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      50% { transform: translate(140px, -80px) scale(1.2) rotate(140deg); }
+      100% { transform: translate(-100px, 90px) scale(0.9) rotate(280deg); }
+    }
+
+    @keyframes cpi-wave-float-2 {
+      0% { transform: translate(0, 0) scale(1.1) rotate(0deg); }
+      50% { transform: translate(-120px, 100px) scale(0.85) rotate(-140deg); }
+      100% { transform: translate(90px, -110px) scale(1.15) rotate(-280deg); }
+    }
+
+    @keyframes cpi-wave-float-3 {
+      0% { transform: translate(0, 0) scale(0.9); }
+      50% { transform: translate(100px, 120px) scale(1.25); }
+      100% { transform: translate(-80px, -90px) scale(1.05); }
+    }
+
+    /* Frosted Tinted Glass Top Overlay */
+    .cpi-ceo-glass-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(8, 10, 20, 0.62);
+      backdrop-filter: blur(50px) saturate(200%);
+      -webkit-backdrop-filter: blur(50px) saturate(200%);
+      z-index: 2;
+    }
+
+    .cpi-ceo-container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 3;
+    }
+
+    .cpi-ceo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.28fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .cpi-ceo-content {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .cpi-ceo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), inset 0 0 12px rgba(255, 255, 255, 0.1);
+      width: fit-content;
+    }
+
+    .cpi-ceo-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #00DFD8;
+      box-shadow: 0 0 12px #00DFD8, 0 0 20px #00DFD8;
+      animation: cpi-pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes cpi-pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    .cpi-ceo-badge-text {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .cpi-ceo-title {
+      font-family: 'TTRamillas', serif;
+      font-size: 3.2rem;
+      line-height: 110%;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .cpi-ceo-title span {
+      background: linear-gradient(135deg, #ffffff 20%, #c4d0ff 55%, #00DFD8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .cpi-ceo-quote {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 1.08rem;
+      line-height: 165%;
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 400;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3.5px solid #00DFD8;
+      border-radius: 0 16px 16px 0;
+      padding: 16px 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      margin: 4px 0;
+    }
+
+    .cpi-ceo-desc {
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.96rem;
+      line-height: 165%;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0;
+    }
+
+    .cpi-ceo-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 6px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .cpi-ceo-author-info h4 {
+      margin: 0;
+      font-family: 'WorkSans', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: -0.01em;
+    }
+
+    .cpi-ceo-author-info p {
+      margin: 4px 0 0 0;
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.82rem;
+      color: #00DFD8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    /* Vibrant Tinted Glass Cinematic Video Player */
+    .cpi-ceo-video-wrap {
+      position: relative;
+      border-radius: 30px;
+      padding: 10px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(121, 40, 202, 0.2) 40%, rgba(0, 223, 216, 0.2) 100%);
+      box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.8),
+                  0 0 60px -10px rgba(0, 223, 216, 0.25),
+                  0 0 40px -5px rgba(121, 40, 202, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .cpi-ceo-video-wrap:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 45px 90px -15px rgba(0, 0, 0, 0.85),
+                  0 0 75px -5px rgba(0, 223, 216, 0.35),
+                  0 0 50px 0px rgba(121, 40, 202, 0.45);
+    }
+
+    .cpi-ceo-video-inner {
+      position: relative;
+      width: 100%;
+      border-radius: 22px;
+      overflow: hidden;
+      background: #000000;
+      aspect-ratio: 16 / 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cpi-ceo-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 22px;
+    }
+
+    /* Sound Pill Control */
+    .cpi-sound-toggle-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 10;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      color: #ffffff;
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .cpi-sound-toggle-btn:hover {
+      background: rgba(0, 223, 216, 0.25);
+      border-color: #00DFD8;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 223, 216, 0.4);
+    }
+
+    .cpi-sound-toggle-btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Play/Pause Overlay Button */
+    .cpi-video-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.22);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      z-index: 5;
+    }
+
+    .cpi-video-overlay.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .cpi-play-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00DFD8 0%, #7928CA 100%);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 35px rgba(0, 223, 216, 0.45), 0 0 0 0 rgba(255, 255, 255, 0.5);
+      animation: cpi-btn-ripple 2.5s infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cpi-video-overlay:hover .cpi-play-btn {
+      transform: scale(1.1);
+      box-shadow: 0 15px 40px rgba(0, 223, 216, 0.6), 0 0 25px rgba(255, 255, 255, 0.8);
+    }
+
+    .cpi-play-btn svg {
+      margin-left: 4px;
+    }
+
+    @keyframes cpi-btn-ripple {
+      0% {
+        box-shadow: 0 10px 30px rgba(0, 223, 216, 0.5), 0 0 0 0 rgba(255, 255, 255, 0.45);
+      }
+      70% {
+        box-shadow: 0 10px 30px rgba(0, 223, 216, 0.5), 0 0 0 22px rgba(255, 255, 255, 0);
+      }
+      100% {
+        box-shadow: 0 10px 30px rgba(0, 223, 216, 0.5), 0 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .cpi-ceo-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .cpi-ceo-section {
+        padding: 75px 0 85px;
+      }
+      .cpi-ceo-title {
+        font-size: 2.3rem;
+      }
+      .cpi-ceo-container {
+        padding: 0 24px;
+      }
+    }
+  </style>
+
+  <section class="cpi-ceo-section" id="cpiCeoSection">
+    <!-- Animated Wavy Mesh Gradient Blobs -->
+    <div class="cpi-ceo-bg-waves">
+      <div class="cpi-wave-blob cpi-wave-blob-1"></div>
+      <div class="cpi-wave-blob cpi-wave-blob-2"></div>
+      <div class="cpi-wave-blob cpi-wave-blob-3"></div>
+      <div class="cpi-wave-blob cpi-wave-blob-4"></div>
+    </div>
+    
+    <!-- Tinted Frosted Glass Overlay -->
+    <div class="cpi-ceo-glass-backdrop"></div>
+
+    <div class="cpi-ceo-container">
+      <div class="cpi-ceo-grid">
+        <div class="cpi-ceo-content">
+          <div class="cpi-ceo-badge">
+            <span class="cpi-ceo-badge-dot"></span>
+            <span class="cpi-ceo-badge-text">Voice of CEO</span>
+          </div>
+
+          <h2 class="cpi-ceo-title">
+            <span>Leadership Insight & Vision</span>
+          </h2>
+
+          <div class="cpi-ceo-quote">
+            "We believe private real estate investing should be transparent, accessible, and engineered for long-term passive cash flow."
+          </div>
+
+          <p class="cpi-ceo-desc">
+            Discover CPI Capital’s disciplined underwriting methodology, institutional-grade multifamily portfolio strategies, and how we curate high-yield private market opportunities.
+          </p>
+
+          <div class="cpi-ceo-author">
+            <div class="cpi-ceo-author-info">
+              <h4>CPI Capital Leadership</h4>
+              <p>Executive Management</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="cpi-ceo-video-wrap">
+          <div class="cpi-ceo-video-inner">
+            <video
+              id="cpiCeoVideo"
+              class="cpi-ceo-video"
+              preload="metadata"
+              playsinline
+              muted
+              loop
+              controls
+              src="video/ceo-web.mp4">
+            </video>
+
+            <!-- Sound Toggle Button -->
+            <button id="cpiSoundToggle" class="cpi-sound-toggle-btn" type="button" aria-label="Toggle Audio">
+              <svg id="cpiMuteIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="1" y1="1" x2="23" y2="23"></line>
+                <path d="M9 9v3a3 3 0 0 0 5.12 2.12M15 9.34V4a3 3 0 0 0-5.94-.6"></path>
+                <path d="M17 16.95A7 7 0 0 1 5 12v-2m14 0v2a7 7 0 0 1-.11 1.23"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+              <span id="cpiSoundText">Click for Sound</span>
+            </button>
+
+            <!-- Click to Play Overlay -->
+            <div id="cpiVideoOverlay" class="cpi-video-overlay is-hidden">
+              <div class="cpi-play-btn">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    (function() {
+      const section = document.getElementById('cpiCeoSection');
+      const video = document.getElementById('cpiCeoVideo');
+      const overlay = document.getElementById('cpiVideoOverlay');
+      const soundBtn = document.getElementById('cpiSoundToggle');
+      const soundText = document.getElementById('cpiSoundText');
+
+      if (!video) return;
+
+      // 1. Intersection Observer for Viewport Autoplay
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.play().then(() => {
+              if (overlay) overlay.classList.add('is-hidden');
+            }).catch(() => {
+              // If browser requires muted start
+              video.muted = true;
+              video.play();
+              if (overlay) overlay.classList.add('is-hidden');
+            });
+          } else {
+            video.pause();
+            if (overlay) overlay.classList.remove('is-hidden');
+          }
+        });
+      }, {
+        threshold: 0.35
+      });
+
+      if (section) observer.observe(section);
+
+      // 2. Sound Toggle Pill
+      if (soundBtn && soundText) {
+        soundBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          video.muted = !video.muted;
+          if (!video.muted) {
+            soundText.textContent = 'Sound ON 🔊';
+            soundBtn.style.borderColor = '#00DFD8';
+            soundBtn.style.color = '#00DFD8';
+          } else {
+            soundText.textContent = 'Muted 🔇';
+            soundBtn.style.borderColor = 'rgba(255,255,255,0.3)';
+            soundBtn.style.color = '#ffffff';
+          }
+          if (video.paused) video.play();
+        });
+      }
+
+      // 3. Overlay interactions
+      if (overlay) {
+        overlay.addEventListener('click', function() {
+          video.play();
+          overlay.classList.add('is-hidden');
+        });
+      }
+
+      video.addEventListener('play', function() {
+        if (overlay) overlay.classList.add('is-hidden');
+      });
+
+      video.addEventListener('pause', function() {
+        if (overlay) overlay.classList.remove('is-hidden');
+      });
+    })();
+  </script>
+
 
 
 
