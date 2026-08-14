@@ -191,6 +191,48 @@ body .BambooHR-ATS-board h2 {
     background: rgba(81, 144, 237, 0.7);
     color: #fff;
 }
+
+/* CPI Capital Logo Sizing & Aspect Ratio */
+.logo img, .page__hero-logo img, .footer__logo img, .menu__logo img, .loader__icon img {
+    height: auto !important;
+    object-fit: contain !important;
+}
+.logo img {
+    width: 44px !important;
+    max-height: 44px !important;
+}
+.page__hero-logo img {
+    width: 85px !important;
+    max-height: 75px !important;
+}
+.footer__logo img {
+    width: 85px !important;
+    max-height: 75px !important;
+}
+.menu__logo img {
+    width: 85px !important;
+    max-height: 75px !important;
+}
+.loader__icon {
+    width: 180px !important;
+    height: auto !important;
+}
+.loader__icon img {
+    width: 100% !important;
+    max-width: 180px !important;
+    height: auto !important;
+}
+
+/* Remove sidebar offset */
+.header {
+    display: none !important;
+}
+.app {
+    padding-left: 0 !important;
+}
+.menu {
+    padding-left: 0 !important;
+}
 </style>
 </head>
 
@@ -205,30 +247,14 @@ body .BambooHR-ATS-board h2 {
       <div class="loader__section"></div>
     </div>
     
-    <div class="loader__icon"><img src="images/test-removebg-preview.png" alt=""></div>
+    <div class="loader__icon"><img src="images/capital_logo_black.png" alt="CPI Capital"></div>
   </div>
 </div>
 
-
-<div id="header" class="header">
-  <div class="header__top">
-    <a href="/" id="logo" class="logo"><img src="images/logo-white-gb.png" alt=""><img src="images/logo-black.png" alt="GreyBrook logotype"></a>
-    <div id="menu-button" class="menu-button-wrap cursor-link">
-      <div class="menu-button-text">Menu</div>
-      <div class="menu-button"><span></span><span></span><span></span></div>
-    </div>
-  </div>
-  <div class="header__bottom">
-    <a class="header__lang" data-barba-prevent="" href="/zh-hans/">中文</a>
-    <div class="header__button">
-      <a href="/contact" class="header__link"><span>Get in touch</span><span><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.21984 0.964087C2.21595 0.632908 2.48542 0.363439 2.8166 0.367323L7.10513 0.417612L7.15542 4.70614C7.15931 5.03732 6.88984 5.30679 6.55866 5.30291C6.23828 5.29915 5.97949 5.04035 5.97573 4.71998L5.94874 2.41819L1.31906 7.04787C1.08594 7.28099 0.707989 7.28099 0.474874 7.04787C0.24176 6.81476 0.241759 6.4368 0.474874 6.20369L5.10455 1.57401L2.80277 1.54702C2.48239 1.54326 2.22359 1.28446 2.21984 0.964087Z" fill="#232323"></path></svg></span></a>
-    </div>
-  </div>
-</div>
 
 <div id="top-button" class="top-button-wrap top-button-wrap_white">
-  <a href="https://portal.greybrook.com/" target="_blank" rel="noopener noreferrer" class="top-button">Investor Login</a>
-  <a href="/contact" class="top-button">Contact Us</a>
+  <a href="#" target="_blank" rel="noopener noreferrer" class="top-button">Investor Login</a>
+  <a href="#" class="top-button">Contact Us</a>
 </div>
 
 <div id="cursor" class="cursor">
@@ -275,19 +301,19 @@ body .BambooHR-ATS-board h2 {
             <div class="page__nav">
         <ul class="page__nav-menu">
                   
-          <li data-block="block-1" class="page__nav-link cursor-link"><span>About</span></li>
+          <li data-block="block-1" class="page__nav-link cursor-link"><span>Track Record</span></li>
             
                   
-          <li data-block="block-action" class="page__nav-link cursor-link"><span>Unparalleled Access</span></li>
+          <li data-block="block-action" class="page__nav-link cursor-link"><span>EMD</span></li>
             
                   
-          <li data-block="block-3-dark" class="page__nav-link cursor-link"><span>Featured Investments</span></li>
+          <li data-block="block-3-dark" class="page__nav-link cursor-link"><span>Knowledge Centre</span></li>
             
                   
-          <li data-block="block-partners" class="page__nav-link cursor-link"><span>Partners </span></li>
+          <li data-block="block-partners" class="page__nav-link cursor-link"><span>Our Team</span></li>
             
                   
-          <li data-block="block-5" class="page__nav-link cursor-link"><span>Highlights</span></li>
+          <li data-block="block-5" class="page__nav-link cursor-link"><span>Media</span></li>
             
                 </ul>
       </div>
@@ -539,37 +565,37 @@ body .BambooHR-ATS-board h2 {
           
           
           <div class="page__hero-bg-video">
-            <video muted="" playsinline="" loop="" preload="auto" src="a38a43f0-0d8dc761" type="video/mp4">
+            <video autoplay="" muted="" playsinline="" loop="" preload="auto" src="video/hero.mp4" type="video/mp4">
             </video>
           </div>
 
           
         </div>
         <div class="page__hero-header">
-          <div class="page__hero-logo"><img src="images/logo2-1.png" alt="Greybrook Logotype"></div>
+          <div class="page__hero-logo"><img src="images/capital_logo_white.png" alt="CPI Capital"></div>
 
 
                     <ul class="page__hero-menu">
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/about/">About</a></li>
+              <li class="page__hero-menu-link"><a href="#">Track Record</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/about/team/">Our Team</a></li>
+              <li class="page__hero-menu-link"><a href="#">EMD</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/investing-in-real-estate/">Invest in Real Estate</a></li>
+              <li class="page__hero-menu-link"><a href="#">Knowledge Centre</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/portfolio/">Our Portfolio</a></li>
+              <li class="page__hero-menu-link"><a href="#">Our Team</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/advisors/">Advisors</a></li>
+              <li class="page__hero-menu-link"><a href="#">Media</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a href="https://greybrook.com/blog/">Insights</a></li>
+              <li class="page__hero-menu-link"><a href="#">Meet us</a></li>
                 
                           
-              <li class="page__hero-menu-link"><a data-barba-prevent="" href="https://greybrook.com/zh-hans/">中文</a></li>
+              <li class="page__hero-menu-link"><a data-barba-prevent="" href="#">Join Now</a></li>
                 
                       </ul>
           
@@ -579,7 +605,7 @@ body .BambooHR-ATS-board h2 {
 
 
           <div class="page__hero-content">
-            <h1 class="page__hero-title">Vision. Capital. Execution.
+            <h1 class="page__hero-title">Invest. Cashflow. Return.
 </h1>
 
             
@@ -2022,7 +2048,7 @@ Through disciplined origination and long-standing industry relationships, we sou
   <div class="container-full">
     <div class="footer__top">
       <div class="footer__sub">
-        <a href="/" class="footer__logo"><img src="images/logo-black.png" alt="Greybrook logotype"></a>
+        <a href="/" class="footer__logo"><img src="images/capital_logo_black.png" alt="CPI Capital"></a>
 
 
 
@@ -2316,7 +2342,7 @@ All financial information presented in this website are presented in Canadian do
 
       <div class="menu__top">
         <div class="menu__logo-wrap">
-          <a href="/" class="menu__logo"><img src="images/logo-black_1.png" alt="Greybrook logotype"></a>
+          <a href="/" class="menu__logo"><img src="images/capital_logo_black.png" alt="CPI Capital"></a>
         </div>
         
         <form id="menu__search" class="menu__search" action="#" method="post" enctype="multipart/form-data">
