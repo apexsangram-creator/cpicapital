@@ -1,0 +1,35 @@
+<svg width="308" height="371" viewBox="0 0 308 371" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0-822926)">
+  <mask id="mask0-918053" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="133" width="308" height="240">
+  <rect x="308" y="373" width="308" height="240" transform="rotate(-180 308 373)" fill="url(#paint0_linear-066880)"/>
+  </mask>
+  <g mask="url(#mask0-918053)">
+  <g opacity="0.1">
+  <path d="M312.499 371.506L-45.7878 371.506L312.5 15.5396L312.499 371.506Z" stroke="#232323"/>
+  <path d="M170.212 156.905L240.5 87.0732L240.5 156.905L170.212 156.905Z" stroke="#232323"/>
+  <path d="M98.2122 228.439L168.5 158.607L168.5 228.439L98.2122 228.439Z" stroke="#232323"/>
+  <path d="M26.2122 299.973L96.4995 230.141L96.4995 299.973L26.2122 299.973Z" stroke="#232323"/>
+  <path d="M-45.7878 371.506L24.4995 301.674L24.4995 371.506L-45.7878 371.506Z" stroke="#232323"/>
+  <path d="M96.4995 371.506L26.2122 371.506L96.4995 301.674L96.4995 371.506Z" stroke="#232323"/>
+  <path d="M168.5 299.973L98.2122 299.973L168.5 230.141L168.5 299.973Z" stroke="#232323"/>
+  <path d="M240.5 228.439L170.212 228.439L240.5 158.607L240.5 228.439Z" stroke="#232323"/>
+  <path d="M312.5 228.439L242.212 228.439L312.5 158.607L312.5 228.439Z" stroke="#232323"/>
+  <path d="M168.5 371.506L98.2122 371.506L168.5 301.674L168.5 371.506Z" stroke="#232323"/>
+  <path d="M240.5 299.973L170.212 299.973L240.5 230.141L240.5 299.973Z" stroke="#232323"/>
+  <path d="M312.5 299.973L242.212 299.973L312.5 230.141L312.5 299.973Z" stroke="#232323"/>
+  <path d="M312.5 371.506L242.212 371.506L312.5 301.674L312.5 371.506Z" stroke="#232323"/>
+  <path d="M240.5 371.506L170.212 371.506L240.5 301.674L240.5 371.506Z" stroke="#232323"/>
+  <path d="M312.5 156.905L242.212 156.905L312.5 87.0732L312.5 156.905Z" stroke="#232323"/>
+  </g>
+  </g>
+  </g>
+  <defs>
+  <linearGradient id="paint0_linear-066880" x1="462" y1="373" x2="462" y2="670.202" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#C4C4C4"/>
+  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="clip0-822926">
+  <rect width="308" height="371" fill="white" transform="translate(308 371) rotate(-180)"/>
+  </clipPath>
+  </defs>
+</svg>
