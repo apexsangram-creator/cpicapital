@@ -1557,24 +1557,35 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     }
 
     /* Auto Scroller Carousel */
+    /* Auto Scroller Carousel with Controls */
+    .cpi-portfolio-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: visible;
+    }
+
     .cpi-portfolio-marquee-wrap {
       width: 100%;
-      overflow: hidden;
+      overflow-x: auto;
+      overflow-y: hidden;
       position: relative;
-      mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
       padding: 15px 0 25px 0;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .cpi-portfolio-marquee-wrap::-webkit-scrollbar {
+      display: none;
     }
 
     .cpi-portfolio-track {
       display: flex;
       align-items: center;
       width: max-content;
-      animation: cpi-prop-scroll 32s linear infinite;
-    }
-
-    .cpi-portfolio-track:hover {
-      animation-play-state: paused;
+      will-change: transform;
     }
 
     .cpi-prop-card {
@@ -1677,13 +1688,80 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       background: #00DFD8;
     }
 
-    @keyframes cpi-prop-scroll {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-33.333333%);
-      }
+    /* Carousel Navigation Arrows */
+    .cpi-prop-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      color: #1b1e2e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 15;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cpi-prop-prev {
+      left: 24px;
+    }
+
+    .cpi-prop-next {
+      right: 24px;
+    }
+
+    .cpi-prop-nav-btn:hover {
+      background: #00DFD8;
+      color: #0b1522;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 10px 28px rgba(0, 223, 216, 0.45);
+      border-color: #00DFD8;
+    }
+
+    .cpi-prop-nav-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2.2;
+    }
+
+    /* Pagination Dots */
+    .cpi-prop-dots {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .cpi-prop-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(74, 81, 127, 0.25);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .cpi-prop-dot:hover {
+      background: rgba(74, 81, 127, 0.6);
+      transform: scale(1.2);
+    }
+
+    .cpi-prop-dot.active {
+      width: 32px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #00DFD8, #4A517F);
+      box-shadow: 0 0 14px rgba(0, 223, 216, 0.55);
     }
 
     @media (max-width: 768px) {
@@ -1705,10 +1783,20 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       .cpi-prop-details {
         padding: 16px 18px;
       }
+      .cpi-prop-nav-btn {
+        width: 40px;
+        height: 40px;
+      }
+      .cpi-prop-prev {
+        left: 10px;
+      }
+      .cpi-prop-next {
+        right: 10px;
+      }
     }
   </style>
 
-  <section class="cpi-portfolio-slider-section">
+  <section class="cpi-portfolio-slider-section" id="cpiMultifamilySection">
     <div class="cpi-portfolio-container">
       <div class="cpi-portfolio-header">
         <div class="cpi-portfolio-badge">
@@ -1722,163 +1810,314 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       </div>
     </div>
 
-    <div class="cpi-portfolio-marquee-wrap">
-      <div class="cpi-portfolio-track">
-        <!-- Set 1 -->
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Multifamily Value-Add</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Apartments</h3>
-            <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
-          </div>
-        </div>
+    <div class="cpi-portfolio-carousel-wrapper">
+      <!-- Previous Arrow -->
+      <button id="cpiPropPrevBtn" class="cpi-prop-nav-btn cpi-prop-prev" aria-label="Previous Property">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Build-To-Rent</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks</h3>
-            <p class="cpi-prop-subtitle">Master-Planned Community</p>
+      <!-- Scrollable Track -->
+      <div id="cpiPropMarqueeWrap" class="cpi-portfolio-marquee-wrap">
+        <div id="cpiPropTrack" class="cpi-portfolio-track">
+          <!-- Set 1 -->
+          <div class="cpi-prop-card" data-slide-index="0">
+            <span class="cpi-prop-tag">Multifamily Value-Add</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Apartments</h3>
+              <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Strategic Development</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Phase II</h3>
-            <p class="cpi-prop-subtitle">High-Density Residential</p>
+          <div class="cpi-prop-card" data-slide-index="1">
+            <span class="cpi-prop-tag">Build-To-Rent</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks</h3>
+              <p class="cpi-prop-subtitle">Master-Planned Community</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Premier Asset</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
-            <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+          <div class="cpi-prop-card" data-slide-index="2">
+            <span class="cpi-prop-tag">Strategic Development</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Phase II</h3>
+              <p class="cpi-prop-subtitle">High-Density Residential</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Value-Add Growth</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Residences</h3>
-            <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+          <div class="cpi-prop-card" data-slide-index="3">
+            <span class="cpi-prop-tag">Premier Asset</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
+              <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Set 2 (for seamless infinite loop) -->
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Multifamily Value-Add</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Apartments</h3>
-            <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
+          <div class="cpi-prop-card" data-slide-index="4">
+            <span class="cpi-prop-tag">Value-Add Growth</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Residences</h3>
+              <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Build-To-Rent</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks</h3>
-            <p class="cpi-prop-subtitle">Master-Planned Community</p>
+          <!-- Set 2 (for continuous smooth looping) -->
+          <div class="cpi-prop-card" data-slide-index="0">
+            <span class="cpi-prop-tag">Multifamily Value-Add</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Apartments</h3>
+              <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Strategic Development</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Phase II</h3>
-            <p class="cpi-prop-subtitle">High-Density Residential</p>
+          <div class="cpi-prop-card" data-slide-index="1">
+            <span class="cpi-prop-tag">Build-To-Rent</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks</h3>
+              <p class="cpi-prop-subtitle">Master-Planned Community</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Premier Asset</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
-            <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+          <div class="cpi-prop-card" data-slide-index="2">
+            <span class="cpi-prop-tag">Strategic Development</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Phase II</h3>
+              <p class="cpi-prop-subtitle">High-Density Residential</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Value-Add Growth</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Residences</h3>
-            <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+          <div class="cpi-prop-card" data-slide-index="3">
+            <span class="cpi-prop-tag">Premier Asset</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
+              <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+            </div>
           </div>
-        </div>
 
-        <!-- Set 3 (ensuring full width coverage on wide screens) -->
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Multifamily Value-Add</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Apartments</h3>
-            <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
+          <div class="cpi-prop-card" data-slide-index="4">
+            <span class="cpi-prop-tag">Value-Add Growth</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Residences</h3>
+              <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Build-To-Rent</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks</h3>
-            <p class="cpi-prop-subtitle">Master-Planned Community</p>
+          <!-- Set 3 -->
+          <div class="cpi-prop-card" data-slide-index="0">
+            <span class="cpi-prop-tag">Multifamily Value-Add</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment.jpg.webp" alt="Bluewater Apartments" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Apartments</h3>
+              <p class="cpi-prop-subtitle">Luxury Waterfront Living</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Strategic Development</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Phase II</h3>
-            <p class="cpi-prop-subtitle">High-Density Residential</p>
+          <div class="cpi-prop-card" data-slide-index="1">
+            <span class="cpi-prop-tag">Build-To-Rent</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks.jpg.webp" alt="Apollo Oaks" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks</h3>
+              <p class="cpi-prop-subtitle">Master-Planned Community</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Premier Asset</span>
-          <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
-            <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+          <div class="cpi-prop-card" data-slide-index="2">
+            <span class="cpi-prop-tag">Strategic Development</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment2.jpg.webp" alt="Bluewater Phase II" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Phase II</h3>
+              <p class="cpi-prop-subtitle">High-Density Residential</p>
+            </div>
           </div>
-        </div>
 
-        <div class="cpi-prop-card">
-          <span class="cpi-prop-tag">Value-Add Growth</span>
-          <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
-          <div class="cpi-prop-scrim"></div>
-          <div class="cpi-prop-details">
-            <h3 class="cpi-prop-name">Bluewater Residences</h3>
-            <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+          <div class="cpi-prop-card" data-slide-index="3">
+            <span class="cpi-prop-tag">Premier Asset</span>
+            <img class="cpi-prop-img" src="images/slide/apollo-oaks3.jpg.webp" alt="Apollo Oaks Heights" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Apollo Oaks Heights</h3>
+              <p class="cpi-prop-subtitle">Modern Suburban Living</p>
+            </div>
+          </div>
+
+          <div class="cpi-prop-card" data-slide-index="4">
+            <span class="cpi-prop-tag">Value-Add Growth</span>
+            <img class="cpi-prop-img" src="images/slide/bluewater-aprtment3.jpg.webp" alt="Bluewater Residences" loading="lazy">
+            <div class="cpi-prop-scrim"></div>
+            <div class="cpi-prop-details">
+              <h3 class="cpi-prop-name">Bluewater Residences</h3>
+              <p class="cpi-prop-subtitle">Institutional Real Estate</p>
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Next Arrow -->
+      <button id="cpiPropNextBtn" class="cpi-prop-nav-btn cpi-prop-next" aria-label="Next Property">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Interactive Navigation Dots -->
+    <div id="cpiPropDots" class="cpi-prop-dots">
+      <button class="cpi-prop-dot active" data-index="0" aria-label="Slide 1: Bluewater Apartments"></button>
+      <button class="cpi-prop-dot" data-index="1" aria-label="Slide 2: Apollo Oaks"></button>
+      <button class="cpi-prop-dot" data-index="2" aria-label="Slide 3: Bluewater Phase II"></button>
+      <button class="cpi-prop-dot" data-index="3" aria-label="Slide 4: Apollo Oaks Heights"></button>
+      <button class="cpi-prop-dot" data-index="4" aria-label="Slide 5: Bluewater Residences"></button>
     </div>
   </section>
+
+  <!-- Multifamily Carousel Controller Script -->
+  <script>
+    (function() {
+      const container = document.getElementById('cpiPropMarqueeWrap');
+      const track = document.getElementById('cpiPropTrack');
+      const prevBtn = document.getElementById('cpiPropPrevBtn');
+      const nextBtn = document.getElementById('cpiPropNextBtn');
+      const dots = document.querySelectorAll('.cpi-prop-dot');
+      if (!container || !track) return;
+
+      const totalUnique = 5;
+      let isPaused = false;
+      let resumeTimeout = null;
+      let autoSpeed = 0.8; // px per frame
+      let animationFrameId = null;
+
+      function getCardStep() {
+        const firstCard = track.querySelector('.cpi-prop-card');
+        if (!firstCard) return 556;
+        const style = window.getComputedStyle(firstCard);
+        const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+        return firstCard.offsetWidth + margin;
+      }
+
+      function updateActiveDot() {
+        const step = getCardStep();
+        const singleSetWidth = step * totalUnique;
+        const currentPos = container.scrollLeft % singleSetWidth;
+        const activeIndex = Math.round(currentPos / step) % totalUnique;
+
+        dots.forEach((dot, idx) => {
+          if (idx === activeIndex) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      // Smooth Infinite Loop Animation
+      function autoScrollStep() {
+        if (!isPaused) {
+          const step = getCardStep();
+          const singleSetWidth = step * totalUnique;
+
+          container.scrollLeft += autoSpeed;
+
+          // Wrap seamlessly
+          if (container.scrollLeft >= singleSetWidth * 2) {
+            container.scrollLeft -= singleSetWidth;
+          }
+          updateActiveDot();
+        }
+        animationFrameId = requestAnimationFrame(autoScrollStep);
+      }
+
+      // Start loop
+      animationFrameId = requestAnimationFrame(autoScrollStep);
+
+      function pauseAndResume() {
+        isPaused = true;
+        if (resumeTimeout) clearTimeout(resumeTimeout);
+        resumeTimeout = setTimeout(() => {
+          isPaused = false;
+        }, 3500);
+      }
+
+      // Hover & Touch Events
+      container.addEventListener('mouseenter', () => { isPaused = true; });
+      container.addEventListener('mouseleave', () => { isPaused = false; });
+      container.addEventListener('touchstart', () => { isPaused = true; }, { passive: true });
+      container.addEventListener('touchend', () => { pauseAndResume(); }, { passive: true });
+
+      // Next Button
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          pauseAndResume();
+          const step = getCardStep();
+          container.scrollBy({ left: step, behavior: 'smooth' });
+          setTimeout(updateActiveDot, 350);
+        });
+      }
+
+      // Prev Button
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          pauseAndResume();
+          const step = getCardStep();
+          const singleSetWidth = step * totalUnique;
+
+          if (container.scrollLeft <= 50) {
+            container.scrollLeft += singleSetWidth;
+          }
+          container.scrollBy({ left: -step, behavior: 'smooth' });
+          setTimeout(updateActiveDot, 350);
+        });
+      }
+
+      // Dot Clicks
+      dots.forEach((dot) => {
+        dot.addEventListener('click', function() {
+          pauseAndResume();
+          const targetIndex = parseInt(this.getAttribute('data-index'), 10);
+          const step = getCardStep();
+          const singleSetWidth = step * totalUnique;
+
+          const baseSet = Math.floor(container.scrollLeft / singleSetWidth) || 1;
+          const targetScroll = (baseSet * singleSetWidth) + (targetIndex * step);
+
+          container.scrollTo({ left: targetScroll, behavior: 'smooth' });
+
+          dots.forEach(d => d.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      // Manual scroll listener to sync dots
+      container.addEventListener('scroll', () => {
+        if (isPaused) {
+          updateActiveDot();
+        }
+      }, { passive: true });
+    })();
+  </script>
 
   
   <!-- Numbers & Investment Options Section -->
