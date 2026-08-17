@@ -3201,6 +3201,586 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 
 
 
+  <!-- ==================== DIVERSIFIED ASSET ALLOCATION SECTION ==================== -->
+  <section class="cpi-asset-allocation-section" id="cpiAssetAllocation">
+    <style>
+      .cpi-asset-allocation-section {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(180deg, #0e1d2e 0%, #122538 50%, #0d1c2c 100%);
+        color: #ffffff;
+        padding: 90px 24px 100px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .cpi-asset-allocation-section *,
+      .cpi-asset-allocation-section *::before,
+      .cpi-asset-allocation-section *::after {
+        box-sizing: border-box;
+      }
+      .cpi-alloc-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .cpi-alloc-header {
+        text-align: center;
+        margin-bottom: 45px;
+      }
+      .cpi-alloc-title {
+        color: #ffffff;
+        font-size: clamp(24px, 3.2vw, 42px);
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        line-height: 1.25;
+        margin: 0 0 10px 0;
+      }
+      .cpi-alloc-subtitle {
+        color: rgba(255, 255, 255, 0.65);
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+      .cpi-alloc-layout {
+        display: grid;
+        grid-template-columns: 280px 1fr 340px;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        min-height: 600px;
+      }
+      @media (max-width: 1080px) {
+        .cpi-alloc-layout {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+      }
+      /* Column groups */
+      .cpi-alloc-col-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 2;
+      }
+      .cpi-alloc-col-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .cpi-alloc-col-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+        z-index: 2;
+      }
+
+      /* Category Blocks */
+      .cpi-category-block {
+        position: relative;
+        padding-top: 14px;
+        transition: all 0.3s ease;
+      }
+      .cpi-category-block::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: currentColor;
+        opacity: 0.35;
+        transition: opacity 0.35s ease, box-shadow 0.35s ease;
+      }
+      .cpi-category-block.is-active-cat::before {
+        opacity: 1;
+        box-shadow: 0 0 12px currentColor;
+      }
+
+      .cpi-cat-private { color: #8b5cf6; }
+      .cpi-cat-realestate { color: #34d399; }
+      .cpi-cat-public { color: #38bdf8; }
+
+      .cpi-category-header {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 18px;
+      }
+      .cpi-category-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+        margin: 0 0 4px 0;
+        letter-spacing: -0.01em;
+      }
+      .cpi-category-link {
+        font-size: 13px;
+        color: #93c5fd;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.2s ease, opacity 0.2s ease;
+        display: inline-block;
+        width: fit-content;
+      }
+      .cpi-category-link:hover {
+        color: #ffffff;
+        opacity: 1;
+      }
+
+      /* Legend Grid */
+      .cpi-legend-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 12px 16px;
+      }
+      .cpi-legend-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 6px;
+        transition: all 0.25s cubic-bezier(0.2, 0.8, 0.4, 1);
+        user-select: none;
+        opacity: 0.85;
+      }
+      .cpi-legend-item:hover,
+      .cpi-legend-item.is-active {
+        opacity: 1 !important;
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateX(4px);
+      }
+      .cpi-legend-item.is-dimmed {
+        opacity: 0.22 !important;
+        filter: grayscale(40%);
+      }
+      .cpi-legend-swatch {
+        width: 14px;
+        height: 14px;
+        border-radius: 2px;
+        flex-shrink: 0;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .cpi-legend-item.is-active .cpi-legend-swatch {
+        transform: scale(1.25);
+        box-shadow: 0 0 10px currentColor;
+      }
+      .cpi-legend-name {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.88);
+        line-height: 1.3;
+        transition: color 0.2s ease, font-weight 0.2s ease;
+      }
+      .cpi-legend-item.is-active .cpi-legend-name {
+        color: #ffffff;
+        font-weight: 600;
+        text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+      }
+
+      /* SVG Chart */
+      .cpi-svg-wrapper {
+        width: 100%;
+        max-width: 580px;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .cpi-chart-svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.45));
+      }
+      .cpi-slice {
+        cursor: pointer;
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s ease, opacity 0.3s ease;
+        transform-origin: 300px 300px;
+      }
+      .cpi-slice:hover,
+      .cpi-slice.is-active {
+        filter: brightness(1.15) drop-shadow(0 8px 18px rgba(0, 0, 0, 0.65));
+        opacity: 1 !important;
+      }
+      .cpi-slice.is-dimmed {
+        opacity: 0.55;
+        filter: brightness(0.85);
+      }
+      .cpi-arc-ring {
+        fill: none;
+        stroke-width: 2.5;
+        transition: stroke-width 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
+        opacity: 0.7;
+      }
+      .cpi-arc-ring.is-active-cat {
+        stroke-width: 4;
+        opacity: 1;
+        filter: drop-shadow(0 0 8px currentColor);
+      }
+      .cpi-chart-connect-line {
+        stroke-width: 1.5;
+        stroke-dasharray: 4 4;
+        opacity: 0.35;
+      }
+
+      /* Tooltip / Center Info */
+      .cpi-alloc-tooltip {
+        position: absolute;
+        pointer-events: none;
+        background: rgba(15, 29, 46, 0.95);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 16px;
+        border-radius: 8px;
+        color: #ffffff;
+        font-size: 13px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: translate(-50%, -120%) scale(0.95);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 10;
+        white-space: nowrap;
+      }
+      .cpi-alloc-tooltip.is-visible {
+        opacity: 1;
+        transform: translate(-50%, -130%) scale(1);
+      }
+      .cpi-alloc-tooltip-title {
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 2px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .cpi-alloc-tooltip-category {
+        font-size: 11px;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      @media (max-width: 768px) {
+        .cpi-asset-allocation-section {
+          padding: 60px 16px 70px;
+        }
+        .cpi-alloc-layout {
+          gap: 30px;
+        }
+        .cpi-alloc-col-right {
+          gap: 30px;
+        }
+        .cpi-svg-wrapper {
+          max-width: 360px;
+        }
+      }
+    </style>
+
+    <div class="cpi-alloc-container">
+      <div class="cpi-alloc-header">
+        <h2 class="cpi-alloc-title">CPI Capital Diversified Asset Allocation</h2>
+      </div>
+
+      <div class="cpi-alloc-layout">
+        <!-- LEFT COLUMN: PUBLIC ASSETS -->
+        <div class="cpi-alloc-col-left">
+          <div class="cpi-category-block cpi-cat-public" data-category="public-assets">
+            <div class="cpi-category-header">
+              <h3 class="cpi-category-title">Public Assets</h3>
+              <a href="#public-assets" class="cpi-category-link">Learn More</a>
+            </div>
+            <div class="cpi-legend-list">
+              <div class="cpi-legend-item" data-id="equities" data-category="public-assets">
+                <span class="cpi-legend-swatch" style="background-color: #487f9d;"></span>
+                <span class="cpi-legend-name">Equities</span>
+              </div>
+              <div class="cpi-legend-item" data-id="fixed-income" data-category="public-assets">
+                <span class="cpi-legend-swatch" style="background-color: #3ba3cb;"></span>
+                <span class="cpi-legend-name">Fixed Income</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CENTER COLUMN: INTERACTIVE PIE SVG -->
+        <div class="cpi-alloc-col-center">
+          <div class="cpi-svg-wrapper" id="cpiSvgWrapper">
+            <svg class="cpi-chart-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="cpiGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+                  <feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite>
+                </filter>
+              </defs>
+
+              <!-- Outer Connecting Extension Lines -->
+              <line x1="300" y1="76" x2="560" y2="76" stroke="#8b5cf6" stroke-width="2.5" class="cpi-top-guide" opacity="0.6"></line>
+              <line x1="466.46" y1="449.89" x2="560" y2="449.89" stroke="#34d399" stroke-width="2.5" class="cpi-right-guide" opacity="0.6"></line>
+              <line x1="89.51" y1="376.61" x2="40" y2="376.61" stroke="#38bdf8" stroke-width="2.5" class="cpi-left-guide" opacity="0.6"></line>
+
+              <!-- Outer Category Arcs (Radius 224px) -->
+              <!-- Private Capital Arc: 0 deg to 132 deg -->
+              <path class="cpi-arc-ring" data-category="private-capital" d="M 300 76 A 224 224 0 0 1 466.46 449.89" stroke="#8b5cf6"></path>
+              <!-- Real Estate Arc: 132 deg to 250 deg -->
+              <path class="cpi-arc-ring" data-category="real-estate" d="M 466.46 449.89 A 224 224 0 0 1 89.51 376.61" stroke="#34d399"></path>
+              <!-- Public Assets Arc: 250 deg to 360 deg -->
+              <path class="cpi-arc-ring" data-category="public-assets" d="M 89.51 376.61 A 224 224 0 0 1 300 76" stroke="#38bdf8"></path>
+
+              <!-- Pie Slices Group (Radius 195px, Center 300 300) -->
+              <g class="cpi-slices-group">
+                <!-- 1. Venture Capital (0 - 4.5 deg) -->
+                <path class="cpi-slice" data-id="venture-capital" data-category="private-capital" data-label="Venture Capital" data-dx="0.94" data-dy="-23.98" d="M 300 300 L 300 105 A 195 195 0 0 1 315.3 105.6 Z" fill="#7843ea"></path>
+                <!-- 2. Mortgages (4.5 - 50 deg) -->
+                <path class="cpi-slice" data-id="mortgages" data-category="private-capital" data-label="Mortgages" data-dx="10.99" data-dy="-21.34" d="M 300 300 L 315.3 105.6 A 195 195 0 0 1 449.38 174.66 Z" fill="#3d185e"></path>
+                <!-- 3. Infrastructure (50 - 72 deg) -->
+                <path class="cpi-slice" data-id="infrastructure" data-category="private-capital" data-label="Infrastructure" data-dx="20.99" data-dy="-11.64" d="M 300 300 L 449.38 174.66 A 195 195 0 0 1 485.46 239.74 Z" fill="#632570"></path>
+                <!-- 4. Private Debt (72 - 112 deg) -->
+                <path class="cpi-slice" data-id="private-debt" data-category="private-capital" data-label="Private Debt" data-dx="23.99" data-dy="0.84" d="M 300 300 L 485.46 239.74 A 195 195 0 0 1 480.8 373.05 Z" fill="#993f77"></path>
+                <!-- 5. Private Equity (112 - 132 deg) -->
+                <path class="cpi-slice" data-id="private-equity" data-category="private-capital" data-label="Private Equity" data-dx="20.35" data-dy="12.72" d="M 300 300 L 480.8 373.05 A 195 195 0 0 1 444.91 430.48 Z" fill="#391c48"></path>
+                <!-- 6. Canadian Real Estate (132 - 174 deg) -->
+                <path class="cpi-slice" data-id="canadian-re" data-category="real-estate" data-label="Canadian Real Estate" data-dx="10.90" data-dy="21.38" d="M 300 300 L 444.91 430.48 A 195 195 0 0 1 320.38 493.93 Z" fill="#d8ead3"></path>
+                <!-- 7. U.S. Real Estate (174 - 222 deg) -->
+                <path class="cpi-slice" data-id="us-re" data-category="real-estate" data-label="U.S. Real Estate" data-dx="-7.42" data-dy="22.83" d="M 300 300 L 320.38 493.93 A 195 195 0 0 1 169.52 444.91 Z" fill="#b2deb0"></path>
+                <!-- 8. Value Add Real Estate (222 - 250 deg) -->
+                <path class="cpi-slice" data-id="value-add-re" data-category="real-estate" data-label="Value Add Real Estate" data-dx="-19.90" data-dy="13.42" d="M 300 300 L 169.52 444.91 A 195 195 0 0 1 116.76 366.69 Z" fill="#5ac79b"></path>
+                <!-- 9. Fixed Income (250 - 298 deg) -->
+                <path class="cpi-slice" data-id="fixed-income" data-category="public-assets" data-label="Fixed Income" data-dx="-23.94" data-dy="-1.67" d="M 300 300 L 116.76 366.69 A 195 195 0 0 1 127.83 208.45 Z" fill="#3ba3cb"></path>
+                <!-- 10. Equities (298 - 360 deg) -->
+                <path class="cpi-slice" data-id="equities" data-category="public-assets" data-label="Equities" data-dx="-12.36" data-dy="-20.57" d="M 300 300 L 127.83 208.45 A 195 195 0 0 1 300 105 Z" fill="#487f9d"></path>
+              </g>
+            </svg>
+
+            <!-- Floating Tooltip -->
+            <div class="cpi-alloc-tooltip" id="cpiAllocTooltip">
+              <div class="cpi-alloc-tooltip-title">
+                <span class="cpi-tooltip-swatch" style="width: 10px; height: 10px; border-radius: 2px; display: inline-block;"></span>
+                <span id="cpiTooltipLabel">Asset Name</span>
+              </div>
+              <div class="cpi-alloc-tooltip-category" id="cpiTooltipCat">Category</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: PRIVATE CAPITAL & REAL ESTATE -->
+        <div class="cpi-alloc-col-right">
+          <!-- TOP: PRIVATE CAPITAL -->
+          <div class="cpi-category-block cpi-cat-private" data-category="private-capital">
+            <div class="cpi-category-header">
+              <h3 class="cpi-category-title">Private Capital</h3>
+              <a href="#private-capital" class="cpi-category-link">Learn More</a>
+            </div>
+            <div class="cpi-legend-list">
+              <div class="cpi-legend-item" data-id="venture-capital" data-category="private-capital">
+                <span class="cpi-legend-swatch" style="background-color: #7843ea;"></span>
+                <span class="cpi-legend-name">Venture Capital</span>
+              </div>
+              <div class="cpi-legend-item" data-id="mortgages" data-category="private-capital">
+                <span class="cpi-legend-swatch" style="background-color: #3d185e;"></span>
+                <span class="cpi-legend-name">Mortgages</span>
+              </div>
+              <div class="cpi-legend-item" data-id="infrastructure" data-category="private-capital">
+                <span class="cpi-legend-swatch" style="background-color: #632570;"></span>
+                <span class="cpi-legend-name">Infrastructure</span>
+              </div>
+              <div class="cpi-legend-item" data-id="private-debt" data-category="private-capital">
+                <span class="cpi-legend-swatch" style="background-color: #993f77;"></span>
+                <span class="cpi-legend-name">Private Debt</span>
+              </div>
+              <div class="cpi-legend-item" data-id="private-equity" data-category="private-capital">
+                <span class="cpi-legend-swatch" style="background-color: #391c48;"></span>
+                <span class="cpi-legend-name">Private Equity</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM: REAL ESTATE -->
+          <div class="cpi-category-block cpi-cat-realestate" data-category="real-estate">
+            <div class="cpi-category-header">
+              <h3 class="cpi-category-title">Real Estate</h3>
+              <a href="#real-estate" class="cpi-category-link">Learn More</a>
+            </div>
+            <div class="cpi-legend-list">
+              <div class="cpi-legend-item" data-id="value-add-re" data-category="real-estate">
+                <span class="cpi-legend-swatch" style="background-color: #5ac79b;"></span>
+                <span class="cpi-legend-name">Value Add Real Estate</span>
+              </div>
+              <div class="cpi-legend-item" data-id="us-re" data-category="real-estate">
+                <span class="cpi-legend-swatch" style="background-color: #b2deb0;"></span>
+                <span class="cpi-legend-name">U.S. Real Estate</span>
+              </div>
+              <div class="cpi-legend-item" data-id="canadian-re" data-category="real-estate">
+                <span class="cpi-legend-swatch" style="background-color: #d8ead3;"></span>
+                <span class="cpi-legend-name">Canadian Real Estate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for Interactive Slice Hover and Legend Sync -->
+    <script>
+      (function() {
+        function initAssetAllocation() {
+          const section = document.getElementById('cpiAssetAllocation');
+          if (!section) return;
+
+          const slices = section.querySelectorAll('.cpi-slice');
+          const legendItems = section.querySelectorAll('.cpi-legend-item');
+          const categoryBlocks = section.querySelectorAll('.cpi-category-block');
+          const arcRings = section.querySelectorAll('.cpi-arc-ring');
+          const tooltip = document.getElementById('cpiAllocTooltip');
+          const tooltipLabel = document.getElementById('cpiTooltipLabel');
+          const tooltipCat = document.getElementById('cpiTooltipCat');
+          const tooltipSwatch = tooltip ? tooltip.querySelector('.cpi-tooltip-swatch') : null;
+          const svgWrapper = document.getElementById('cpiSvgWrapper');
+
+          const categoryNames = {
+            'private-capital': 'Private Capital',
+            'real-estate': 'Real Estate',
+            'public-assets': 'Public Assets'
+          };
+
+          function activateItem(id, event) {
+            const activeSlice = section.querySelector(`.cpi-slice[data-id="${id}"]`);
+            const activeLegend = section.querySelector(`.cpi-legend-item[data-id="${id}"]`);
+            if (!activeSlice) return;
+
+            const category = activeSlice.getAttribute('data-category');
+            const label = activeSlice.getAttribute('data-label');
+            const dx = activeSlice.getAttribute('data-dx') || '0';
+            const dy = activeSlice.getAttribute('data-dy') || '0';
+            const fillColor = activeSlice.getAttribute('fill') || '#ffffff';
+
+            // 1. Pop out active slice along bisector
+            slices.forEach(s => {
+              if (s.getAttribute('data-id') === id) {
+                s.style.transform = `translate(${dx}px, ${dy}px) scale(1.02)`;
+                s.classList.add('is-active');
+                s.classList.remove('is-dimmed');
+              } else {
+                s.style.transform = '';
+                s.classList.remove('is-active');
+                s.classList.add('is-dimmed');
+              }
+            });
+
+            // 2. Highlight legend item, dim other legend items
+            legendItems.forEach(li => {
+              if (li.getAttribute('data-id') === id) {
+                li.classList.add('is-active');
+                li.classList.remove('is-dimmed');
+              } else {
+                li.classList.remove('is-active');
+                li.classList.add('is-dimmed');
+              }
+            });
+
+            // 3. Highlight parent category block and arc
+            categoryBlocks.forEach(cb => {
+              if (cb.getAttribute('data-category') === category) {
+                cb.classList.add('is-active-cat');
+              } else {
+                cb.classList.remove('is-active-cat');
+              }
+            });
+
+            arcRings.forEach(ar => {
+              if (ar.getAttribute('data-category') === category) {
+                ar.classList.add('is-active-cat');
+              } else {
+                ar.classList.remove('is-active-cat');
+              }
+            });
+
+            // 4. Update Tooltip
+            if (tooltip && tooltipLabel && tooltipCat) {
+              tooltipLabel.textContent = label;
+              tooltipCat.textContent = categoryNames[category] || category;
+              if (tooltipSwatch) tooltipSwatch.style.backgroundColor = fillColor;
+              tooltip.classList.add('is-visible');
+
+              if (event && svgWrapper) {
+                const rect = svgWrapper.getBoundingClientRect();
+                let clientX = event.clientX || (event.touches && event.touches[0] ? event.touches[0].clientX : rect.left + rect.width / 2);
+                let clientY = event.clientY || (event.touches && event.touches[0] ? event.touches[0].clientY : rect.top + rect.height / 2);
+                
+                const posX = clientX - rect.left;
+                const posY = clientY - rect.top;
+                tooltip.style.left = `${posX}px`;
+                tooltip.style.top = `${posY}px`;
+              }
+            }
+          }
+
+          function resetAll() {
+            slices.forEach(s => {
+              s.style.transform = '';
+              s.classList.remove('is-active', 'is-dimmed');
+            });
+            legendItems.forEach(li => {
+              li.classList.remove('is-active', 'is-dimmed');
+            });
+            categoryBlocks.forEach(cb => {
+              cb.classList.remove('is-active-cat');
+            });
+            arcRings.forEach(ar => {
+              ar.classList.remove('is-active-cat');
+            });
+            if (tooltip) {
+              tooltip.classList.remove('is-visible');
+            }
+          }
+
+          // Attach slice listeners
+          slices.forEach(slice => {
+            const id = slice.getAttribute('data-id');
+            slice.addEventListener('mouseenter', function(e) {
+              activateItem(id, e);
+            });
+            slice.addEventListener('mousemove', function(e) {
+              if (tooltip && svgWrapper) {
+                const rect = svgWrapper.getBoundingClientRect();
+                tooltip.style.left = `${e.clientX - rect.left}px`;
+                tooltip.style.top = `${e.clientY - rect.top}px`;
+              }
+            });
+            slice.addEventListener('mouseleave', resetAll);
+            slice.addEventListener('touchstart', function(e) {
+              activateItem(id, e);
+            }, { passive: true });
+          });
+
+          // Attach legend listeners
+          legendItems.forEach(item => {
+            const id = item.getAttribute('data-id');
+            item.addEventListener('mouseenter', function(e) {
+              activateItem(id, e);
+            });
+            item.addEventListener('mouseleave', resetAll);
+            item.addEventListener('touchstart', function(e) {
+              activateItem(id, e);
+            }, { passive: true });
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initAssetAllocation);
+        } else {
+          initAssetAllocation();
+        }
+      })();
+    </script>
+  </section>
+  <!-- ==================== /DIVERSIFIED ASSET ALLOCATION SECTION ==================== -->
+
   <div data-scroll="block-5" class="cards cards_slider cards_style-one">
 
 
