@@ -2344,7 +2344,7 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       width: 100%;
       background: #080a14;
       color: #ffffff;
-      padding: 120px 0 130px;
+      padding: 65px 0 75px;
       position: relative;
       overflow: hidden;
       box-sizing: border-box;
@@ -2364,52 +2364,52 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     .cpi-proc-blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(90px);
-      opacity: 0.55;
+      filter: blur(80px);
+      opacity: 0.45;
       mix-blend-mode: screen;
       animation: cpi-proc-drift 18s ease-in-out infinite alternate;
     }
 
     .cpi-proc-blob-1 {
-      width: 550px;
-      height: 550px;
+      width: 400px;
+      height: 400px;
       background: radial-gradient(circle, #00DFD8 0%, rgba(0, 223, 216, 0) 70%);
-      top: -100px;
-      left: -80px;
+      top: -80px;
+      left: -60px;
       animation-duration: 16s;
     }
 
     .cpi-proc-blob-2 {
-      width: 600px;
-      height: 600px;
+      width: 450px;
+      height: 450px;
       background: radial-gradient(circle, #7928CA 0%, rgba(121, 40, 202, 0) 70%);
-      bottom: -120px;
-      right: -80px;
+      bottom: -100px;
+      right: -60px;
       animation-duration: 20s;
       animation-delay: -4s;
     }
 
     .cpi-proc-blob-3 {
-      width: 500px;
-      height: 500px;
+      width: 350px;
+      height: 350px;
       background: radial-gradient(circle, #FF0080 0%, rgba(255, 0, 128, 0) 70%);
       top: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
       animation-duration: 22s;
       animation-delay: -8s;
-      opacity: 0.35;
+      opacity: 0.3;
     }
 
     .cpi-proc-blob-4 {
-      width: 450px;
-      height: 450px;
+      width: 350px;
+      height: 350px;
       background: radial-gradient(circle, #4A517F 0%, rgba(74, 81, 127, 0) 70%);
       bottom: 10%;
       left: 15%;
       animation-duration: 18s;
       animation-delay: -6s;
-      opacity: 0.45;
+      opacity: 0.35;
     }
 
     @keyframes cpi-proc-drift {
@@ -2417,18 +2417,18 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
         transform: translate(0px, 0px) scale(1) rotate(0deg);
       }
       50% {
-        transform: translate(45px, -35px) scale(1.12) rotate(15deg);
+        transform: translate(35px, -25px) scale(1.08) rotate(12deg);
       }
       100% {
-        transform: translate(-40px, 40px) scale(0.92) rotate(-10deg);
+        transform: translate(-30px, 30px) scale(0.95) rotate(-8deg);
       }
     }
 
     .cpi-process-container {
       width: 100%;
-      max-width: 1380px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0 40px;
+      padding: 0 24px;
       box-sizing: border-box;
       position: relative;
       z-index: 2;
@@ -2439,58 +2439,58 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 
     .cpi-process-header {
       text-align: center;
-      margin-bottom: 70px;
+      margin-bottom: 36px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 10px;
     }
 
     .cpi-process-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 18px;
+      gap: 6px;
+      padding: 4px 14px;
       border-radius: 9999px;
-      background: rgba(0, 223, 216, 0.12);
-      border: 1px solid rgba(0, 223, 216, 0.3);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(0, 223, 216, 0.1);
+      border: 1px solid rgba(0, 223, 216, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     .cpi-process-badge-dot {
-      width: 7px;
-      height: 7px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
       background: #00DFD8;
-      box-shadow: 0 0 10px #00DFD8;
+      box-shadow: 0 0 8px #00DFD8;
     }
 
     .cpi-process-badge-text {
-      font-family: 'WorkSans', sans-serif;
-      font-size: 0.76rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.72rem;
       font-weight: 700;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #00DFD8;
     }
 
     .cpi-process-title {
-      font-family: 'TTRamillas', serif;
-      font-size: 3rem;
-      line-height: 115%;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: clamp(24px, 2.8vw, 36px);
+      line-height: 1.2;
       color: #ffffff;
-      letter-spacing: 0.08em;
+      letter-spacing: -0.02em;
       text-transform: uppercase;
       margin: 0;
-      font-weight: 400;
-      text-shadow: 0 4px 25px rgba(0, 223, 216, 0.2);
+      font-weight: 700;
+      text-shadow: 0 2px 20px rgba(0, 223, 216, 0.25);
     }
 
     .cpi-process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
+      gap: 18px;
       width: 100%;
       position: relative;
       box-sizing: border-box;
@@ -2499,16 +2499,16 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     /* Continuous Glowing Light-Beam Connecting Line */
     .cpi-process-connector-line {
       position: absolute;
-      top: 86px;
-      left: 12%;
-      right: 12%;
-      height: 3px;
+      top: 47px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
       background: rgba(0, 223, 216, 0.2);
       z-index: 1;
       pointer-events: none;
       border-radius: 9999px;
       overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 223, 216, 0.3);
+      box-shadow: 0 0 8px rgba(0, 223, 216, 0.25);
     }
 
     .cpi-process-connector-line::after {
@@ -2516,7 +2516,7 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       position: absolute;
       top: 0;
       left: -100%;
-      width: 60%;
+      width: 50%;
       height: 100%;
       background: linear-gradient(90deg, 
         transparent 0%, 
@@ -2525,33 +2525,33 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
         #00DFD8 60%, 
         transparent 100%
       );
-      box-shadow: 0 0 20px #00DFD8, 0 0 35px #00DFD8;
+      box-shadow: 0 0 16px #00DFD8;
       animation: cpi-laser-flow 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
 
     @keyframes cpi-laser-flow {
       0% {
-        left: -60%;
+        left: -50%;
       }
       100% {
         left: 120%;
       }
     }
 
-    /* Glassmorphic Step Cards */
+    /* Modern Compact Glassmorphic Step Cards */
     .cpi-proc-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      background: rgba(18, 22, 38, 0.65);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(28px);
-      -webkit-backdrop-filter: blur(28px);
-      border-radius: 26px;
-      padding: 40px 24px 34px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(15, 23, 42, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 22px 18px 20px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
       overflow: hidden;
       box-sizing: border-box;
@@ -2565,50 +2565,50 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       inset: 0;
       background: linear-gradient(135deg, rgba(0, 223, 216, 0.12) 0%, rgba(121, 40, 202, 0.1) 100%);
       opacity: 0;
-      transition: opacity 0.45s ease;
+      transition: opacity 0.35s ease;
       pointer-events: none;
     }
 
     .cpi-proc-card:hover {
-      transform: translateY(-12px);
-      border-color: rgba(0, 223, 216, 0.5);
-      box-shadow: 0 24px 55px rgba(0, 0, 0, 0.5), 0 0 35px rgba(0, 223, 216, 0.28);
+      transform: translateY(-6px);
+      border-color: rgba(0, 223, 216, 0.45);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 24px rgba(0, 223, 216, 0.25);
     }
 
     .cpi-proc-card:hover::before {
       opacity: 1;
     }
 
-    /* Glowing Orb Icon Pod */
+    /* Compact Glowing Icon Pod */
     .cpi-proc-icon-wrap {
       position: relative;
-      width: 90px;
-      height: 90px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background: linear-gradient(135deg, rgba(74, 81, 127, 0.35) 0%, rgba(18, 22, 38, 0.7) 100%);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(135deg, rgba(74, 81, 127, 0.3) 0%, rgba(18, 22, 38, 0.8) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 0 26px 0;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-      transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+      margin: 0 0 14px 0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .cpi-proc-card:hover .cpi-proc-icon-wrap {
-      transform: scale(1.12);
-      background: linear-gradient(135deg, rgba(0, 223, 216, 0.25) 0%, rgba(121, 40, 202, 0.35) 100%);
+      transform: scale(1.08);
+      background: linear-gradient(135deg, rgba(0, 223, 216, 0.22) 0%, rgba(121, 40, 202, 0.3) 100%);
       border-color: #00DFD8;
-      box-shadow: 0 0 30px rgba(0, 223, 216, 0.45);
+      box-shadow: 0 0 20px rgba(0, 223, 216, 0.4);
     }
 
     .cpi-proc-icon {
-      width: 44px;
-      height: 44px;
+      width: 24px;
+      height: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.4s ease;
+      transition: transform 0.3s ease;
     }
 
     .cpi-proc-icon svg {
@@ -2616,25 +2616,25 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       height: 100%;
       stroke: #ffffff;
       stroke-width: 2;
-      transition: all 0.35s ease;
+      transition: all 0.3s ease;
     }
 
     .cpi-proc-card:hover .cpi-proc-icon svg {
       stroke: #00DFD8;
-      filter: drop-shadow(0 0 8px rgba(0, 223, 216, 0.6));
+      filter: drop-shadow(0 0 6px rgba(0, 223, 216, 0.5));
     }
 
     .cpi-proc-name {
-      font-family: 'WorkSans', sans-serif;
-      font-size: 1.25rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.95rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
       color: #ffffff;
-      margin: 0 0 14px 0;
+      margin: 0 0 8px 0;
       position: relative;
       z-index: 2;
-      transition: color 0.35s ease;
+      transition: color 0.3s ease;
     }
 
     .cpi-proc-card:hover .cpi-proc-name {
@@ -2642,10 +2642,10 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     }
 
     .cpi-proc-desc {
-      font-family: 'WorkSans', sans-serif;
-      font-size: 0.92rem;
-      line-height: 160%;
-      color: rgba(255, 255, 255, 0.75);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 0.82rem;
+      line-height: 145%;
+      color: rgba(255, 255, 255, 0.72);
       margin: 0;
       position: relative;
       z-index: 2;
@@ -2655,7 +2655,7 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     @media (max-width: 1100px) {
       .cpi-process-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
+        gap: 16px;
       }
       .cpi-process-connector-line {
         display: none;
@@ -2664,16 +2664,17 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 
     @media (max-width: 600px) {
       .cpi-process-section {
-        padding: 75px 0 85px;
+        padding: 50px 0 60px;
       }
       .cpi-process-title {
-        font-size: 2.2rem;
+        font-size: 1.6rem;
       }
       .cpi-process-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
       }
       .cpi-proc-card {
-        padding: 32px 20px 28px;
+        padding: 18px 16px;
       }
     }
   </style>
@@ -3780,6 +3781,547 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     </script>
   </section>
   <!-- ==================== /DIVERSIFIED ASSET ALLOCATION SECTION ==================== -->
+
+  <!-- ==================== PRIVATE EQUITY INVESTMENT OPTIONS SECTION ==================== -->
+  <section class="cpi-pe-options-section" id="cpiPrivateEquityOptions">
+    <style>
+      .cpi-pe-options-section {
+        position: relative;
+        width: 100%;
+        background: #f8fafc;
+        color: #0f172a;
+        padding: 95px 24px 110px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+      .cpi-pe-options-section *,
+      .cpi-pe-options-section *::before,
+      .cpi-pe-options-section *::after {
+        box-sizing: border-box;
+      }
+      .cpi-pe-container {
+        max-width: 1240px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .cpi-pe-header {
+        text-align: center;
+        max-width: 860px;
+        margin: 0 auto 60px;
+      }
+      .cpi-pe-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(19, 37, 59, 0.08);
+        color: #13253b;
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .cpi-pe-badge-dot {
+        width: 8px;
+        height: 8px;
+        background: #10b981;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .cpi-pe-title {
+        font-size: clamp(26px, 3.4vw, 42px);
+        font-weight: 700;
+        color: #0f172a;
+        letter-spacing: -0.025em;
+        line-height: 1.25;
+        margin: 0 0 18px 0;
+      }
+      .cpi-pe-subtitle {
+        font-size: clamp(15px, 1.4vw, 17px);
+        color: #475569;
+        line-height: 1.65;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      /* Grid & Connector */
+      .cpi-pe-grid-wrap {
+        position: relative;
+      }
+      .cpi-pe-connector-bg {
+        position: absolute;
+        top: 25%;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.8) 50%, rgba(16, 185, 129, 0.1) 100%);
+        z-index: 0;
+        pointer-events: none;
+      }
+      .cpi-pe-connector-bg-2 {
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        right: 5%;
+        height: 2px;
+        background: linear-gradient(90deg, rgba(16, 185, 129, 0.1) 0%, rgba(16, 185, 129, 0.8) 50%, rgba(16, 185, 129, 0.1) 100%);
+        z-index: 0;
+        pointer-events: none;
+      }
+      @media (max-width: 992px) {
+        .cpi-pe-connector-bg,
+        .cpi-pe-connector-bg-2 {
+          display: none;
+        }
+      }
+
+      .cpi-pe-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px 28px;
+        position: relative;
+        z-index: 1;
+      }
+      @media (max-width: 992px) {
+        .cpi-pe-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+      @media (max-width: 640px) {
+        .cpi-pe-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+
+      /* Card Style with Tinted Mix-Blend Modes */
+      .cpi-pe-card {
+        position: relative;
+        background: #ffffff;
+        border-radius: 14px;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        height: 300px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.65s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
+        isolation: isolate;
+      }
+      /* Tinted Mix-Blend Background Accent Layer */
+      .cpi-pe-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.16), transparent 55%),
+                    radial-gradient(circle at bottom left, rgba(56, 189, 248, 0.14), transparent 50%),
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(241, 245, 249, 0.98));
+        mix-blend-mode: multiply;
+        border-radius: 14px;
+        pointer-events: none;
+        z-index: 0;
+        transition: opacity 0.65s ease;
+      }
+      .cpi-pe-card:hover,
+      .cpi-pe-card.is-touched {
+        transform: translateY(-8px);
+        box-shadow: 0 22px 45px rgba(19, 37, 59, 0.22);
+        border-color: #13253b;
+      }
+
+      /* Front State (Pill on Top + Center Icon) */
+      .cpi-pe-card-front {
+        position: absolute;
+        inset: 0;
+        padding: 22px 20px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        transition: opacity 0.55s cubic-bezier(0.25, 1, 0.5, 1), transform 0.55s cubic-bezier(0.25, 1, 0.5, 1);
+        background: transparent;
+        z-index: 1;
+      }
+      .cpi-pe-card:hover .cpi-pe-card-front,
+      .cpi-pe-card.is-touched .cpi-pe-card-front {
+        opacity: 0;
+        transform: scale(0.92) translateY(-6px);
+        pointer-events: none;
+      }
+
+      /* Pill Title at Top */
+      .cpi-pe-pill {
+        background: #13253b;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 9px 18px;
+        border-radius: 999px;
+        text-align: center;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+        box-shadow: 0 4px 14px rgba(19, 37, 59, 0.2);
+        width: 90%;
+        max-width: 290px;
+        margin-bottom: 20px;
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      /* Center Icon */
+      .cpi-pe-icon-wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .cpi-pe-icon-svg {
+        width: 88px;
+        height: 88px;
+        transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .cpi-pe-card:hover .cpi-pe-icon-svg {
+        transform: scale(1.08);
+      }
+
+      /* Back State (Slow & Graceful Hover Description Reveal) */
+      .cpi-pe-card-back {
+        position: absolute;
+        inset: 0;
+        background: #13253b;
+        color: #ffffff;
+        padding: 24px 22px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        opacity: 0;
+        transform: translateY(16px);
+        transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1), transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        z-index: 2;
+        border-radius: 14px;
+        overflow-y: auto;
+        isolation: isolate;
+      }
+      /* Dark Tinted Blend Layer on Back */
+      .cpi-pe-card-back::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.28), transparent 60%),
+                    radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.24), transparent 60%);
+        mix-blend-mode: soft-light;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .cpi-pe-card:hover .cpi-pe-card-back,
+      .cpi-pe-card.is-touched .cpi-pe-card-back {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      /* Slow Staggered Reveal for Header and Description */
+      .cpi-pe-back-header {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.12s;
+      }
+      .cpi-pe-card:hover .cpi-pe-back-header,
+      .cpi-pe-card.is-touched .cpi-pe-back-header {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .cpi-pe-back-pill-dot {
+        width: 8px;
+        height: 8px;
+        background: #10b981;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .cpi-pe-back-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+        margin: 0;
+      }
+      .cpi-pe-back-desc {
+        position: relative;
+        z-index: 1;
+        font-size: 12.5px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+        margin: 0;
+        opacity: 0;
+        transform: translateY(14px);
+        transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1) 0.22s;
+      }
+      .cpi-pe-card:hover .cpi-pe-back-desc,
+      .cpi-pe-card.is-touched .cpi-pe-back-desc {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 768px) {
+        .cpi-pe-card {
+          height: 290px;
+        }
+        .cpi-pe-back-desc {
+          font-size: 12px;
+          line-height: 1.55;
+        }
+      }
+    </style>
+
+    <div class="cpi-pe-container">
+      <div class="cpi-pe-header">
+        <div class="cpi-pe-badge">
+          <span class="cpi-pe-badge-dot"></span>
+          <span>Investment Strategy</span>
+        </div>
+        <h2 class="cpi-pe-title">Private Equity Investment Options</h2>
+        <p class="cpi-pe-subtitle">
+          Enhance portfolio diversification through strategic real estate investments across various asset classes, utilizing both debt and equity, meticulously sourced, procured, managed, and divested by the expert team at CPI Capital.
+        </p>
+      </div>
+
+      <div class="cpi-pe-grid-wrap">
+        <!-- Connecting guide lines -->
+        <div class="cpi-pe-connector-bg" aria-hidden="true"></div>
+        <div class="cpi-pe-connector-bg-2" aria-hidden="true"></div>
+
+        <div class="cpi-pe-grid">
+          <!-- Card 1: Identify High-Growth Markets -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Identify High-Growth Markets</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- Map / Location Pin SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Folded Map (Teal / Emerald) -->
+                  <path d="M16 28L30 22L50 30L64 24V56L50 62L30 54L16 60V28Z" stroke="#00b894" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <path d="M30 22V54" stroke="#00b894" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M50 30V62" stroke="#00b894" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Location Pin (Dark Navy) -->
+                  <path d="M40 12C34.477 12 30 16.477 30 22C30 29.5 40 40 40 40C40 40 50 29.5 50 22C50 16.477 45.523 12 40 12Z" stroke="#13253b" stroke-width="2.5" fill="#ffffff"/>
+                  <!-- Star inside pin -->
+                  <path d="M40 17.5L41.35 20.24L44.38 20.68L42.19 22.81L42.71 25.82L40 24.39L37.29 25.82L37.81 22.81L35.62 20.68L38.65 20.24L40 17.5Z" fill="#13253b"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Identify High-Growth Markets</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                CPI Capital identifies investment opportunities in high-growth, business-friendly markets with strong population growth, job creation, and long-term economic fundamentals. These factors drive sustained demand for rental housing and support long-term appreciation. Today, our investment strategy is focused on Texas and Florida, where we pursue both value-add multifamily acquisitions and build-to-rent development opportunities.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Source Institutional-Quality Opportunities -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Source Institutional-Quality Opportunities</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- Skyline Office Towers SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Main Tower (Navy) -->
+                  <rect x="24" y="16" width="22" height="48" rx="1.5" stroke="#13253b" stroke-width="2.5" fill="none"/>
+                  <!-- Windows Grid -->
+                  <circle cx="30" cy="24" r="1.5" fill="#13253b"/>
+                  <circle cx="40" cy="24" r="1.5" fill="#13253b"/>
+                  <circle cx="30" cy="32" r="1.5" fill="#13253b"/>
+                  <circle cx="40" cy="32" r="1.5" fill="#13253b"/>
+                  <circle cx="30" cy="40" r="1.5" fill="#13253b"/>
+                  <circle cx="40" cy="40" r="1.5" fill="#13253b"/>
+                  <circle cx="30" cy="48" r="1.5" fill="#13253b"/>
+                  <circle cx="40" cy="48" r="1.5" fill="#13253b"/>
+                  <!-- Side Tower (Teal / Emerald) -->
+                  <rect x="46" y="28" width="18" height="36" rx="1.5" stroke="#00b894" stroke-width="2.5" fill="none"/>
+                  <circle cx="55" cy="36" r="1.5" fill="#00b894"/>
+                  <circle cx="55" cy="44" r="1.5" fill="#00b894"/>
+                  <circle cx="55" cy="52" r="1.5" fill="#00b894"/>
+                  <!-- Ground Line -->
+                  <line x1="18" y1="64" x2="68" y2="64" stroke="#13253b" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Source Institutional-Quality Opportunities</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                Our team leverages extensive market relationships, disciplined underwriting, and rigorous acquisition criteria to source value-add multifamily communities and build-to-rent development opportunities with compelling upside. Every opportunity is carefully evaluated to ensure it aligns with our investment strategy and long-term return objectives before moving forward.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Structure the Investment -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Structure the Investment</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- Investment Structuring SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Money Bag / Hand (Navy) -->
+                  <path d="M22 52L28 48C30.5 46.5 33.5 46.5 36 48L44 52C46.5 53.5 49.5 53.5 52 52L56 50" stroke="#13253b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M28 44C25 40 25 34 29 30C33 26 40 26 43 30C46 34 44 40 40 44" stroke="#13253b" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M34 26V23C34 21.5 35 20.5 36 20.5C37 20.5 38 21.5 38 23V26" stroke="#13253b" stroke-width="2"/>
+                  <path d="M36 33V37M34 34.5H38" stroke="#13253b" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Growth Chart & Pie (Teal / Emerald) -->
+                  <circle cx="58" cy="26" r="10" stroke="#00b894" stroke-width="2.5"/>
+                  <path d="M58 26L58 16" stroke="#00b894" stroke-width="2"/>
+                  <path d="M58 26L65 31" stroke="#00b894" stroke-width="2"/>
+                  <!-- Bar Chart -->
+                  <rect x="52" y="44" width="4" height="12" rx="1" fill="#00b894"/>
+                  <rect x="58" y="38" width="4" height="18" rx="1" fill="#00b894"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Structure the Investment</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                Once an opportunity has been thoroughly vetted, CPI completes comprehensive due diligence, financial modeling, financing, and investment structuring before presenting it to investors. Through exclusive investor webinars and transparent offering materials, investors gain a detailed understanding of the opportunity, business plan, projected returns, and associated risks before making an investment decision.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4: Execute the Business Plan -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Execute the Business Plan</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- House with Cycle / Renovation Arrows SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Central House (Navy) -->
+                  <path d="M30 42L40 32L50 42V56H30V42Z" stroke="#13253b" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+                  <rect x="37" y="46" width="6" height="10" stroke="#13253b" stroke-width="2"/>
+                  <!-- Cycle Arrows (Teal / Emerald) -->
+                  <path d="M58 34C61.5 39 61.5 45.5 58 50.5L54 48" stroke="#00b894" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M58 34L64 36" stroke="#00b894" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M22 46C18.5 41 18.5 34.5 22 29.5L26 32" stroke="#00b894" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M22 46L16 44" stroke="#00b894" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Execute the Business Plan</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                From day one, our experienced team begins executing the business plan. Whether renovating an existing multifamily community or developing a new build-to-rent neighborhood from the ground up, we focus on delivering quality housing, improving operational performance, and creating long-term value for both residents and investors through disciplined execution.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5: Optimize Asset Performance -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Optimize Asset Performance</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- Cash / Coins / Optimization SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Banknote (Teal / Emerald) -->
+                  <rect x="22" y="24" width="38" height="24" rx="2" stroke="#00b894" stroke-width="2.5" fill="none"/>
+                  <circle cx="41" cy="36" r="4.5" stroke="#00b894" stroke-width="2"/>
+                  <circle cx="28" cy="30" r="1.5" fill="#00b894"/>
+                  <circle cx="54" cy="42" r="1.5" fill="#00b894"/>
+                  <!-- Coins Stack (Navy) -->
+                  <circle cx="48" cy="52" r="8" stroke="#13253b" stroke-width="2.5" fill="#ffffff"/>
+                  <path d="M48 48V56M46 50H50" stroke="#13253b" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="36" cy="56" r="7" stroke="#13253b" stroke-width="2.5" fill="#ffffff"/>
+                  <path d="M36 53V59M34 54.5H38" stroke="#13253b" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Optimize Asset Performance</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                Throughout the investment lifecycle, CPI actively manages each asset to maximize performance. Our team focuses on construction oversight, property operations, leasing, revenue growth, expense management, and resident satisfaction while providing investors with regular reporting and distributions when appropriate based on the investment strategy.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6: Realize Value -->
+          <div class="cpi-pe-card" tabindex="0">
+            <div class="cpi-pe-card-front">
+              <div class="cpi-pe-pill">Realize Value</div>
+              <div class="cpi-pe-icon-wrap">
+                <!-- Hand holding Wealth / Money Bag SVG -->
+                <svg class="cpi-pe-icon-svg" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Money Bag (Teal / Emerald) -->
+                  <path d="M44 26C41 22 41 16 45 12C49 8 56 8 59 12C62 16 60 22 56 26" stroke="#00b894" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                  <path d="M50 8V5C50 3.5 51 2.5 52 2.5C53 2.5 54 3.5 54 5V8" stroke="#00b894" stroke-width="2"/>
+                  <path d="M52 14V19M50 16.5H54" stroke="#00b894" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Hand (Navy) -->
+                  <path d="M18 48H28V62H18V48Z" stroke="#13253b" stroke-width="2.5" stroke-linejoin="round"/>
+                  <path d="M28 52L44 48C46.5 47.5 49 48.5 50.5 50.5L52 52.5C53.5 54.5 53 57.5 51 59L45 63H34" stroke="#13253b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M28 57H42" stroke="#13253b" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cpi-pe-card-back">
+              <div class="cpi-pe-back-header">
+                <span class="cpi-pe-back-pill-dot"></span>
+                <h3 class="cpi-pe-back-title">Realize Value</h3>
+              </div>
+              <p class="cpi-pe-back-desc">
+                Once the business plan has been successfully executed and market conditions are favorable, CPI seeks to maximize investor value through a strategic sale, refinance, or recapitalization. Our disciplined exit strategy is designed to preserve long-term asset quality while delivering attractive risk-adjusted returns to our investors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script for Touch / Click Support on Mobile -->
+    <script>
+      (function() {
+        function initPeCards() {
+          const cards = document.querySelectorAll('.cpi-pe-card');
+          cards.forEach(card => {
+            card.addEventListener('click', function() {
+              if (window.innerWidth <= 992) {
+                const wasActive = this.classList.contains('is-touched');
+                cards.forEach(c => c.classList.remove('is-touched'));
+                if (!wasActive) this.classList.add('is-touched');
+              }
+            });
+          });
+        }
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initPeCards);
+        } else {
+          initPeCards();
+        }
+      })();
+    </script>
+  </section>
+  <!-- ==================== /PRIVATE EQUITY INVESTMENT OPTIONS SECTION ==================== -->
 
   <div data-scroll="block-5" class="cards cards_slider cards_style-one">
 
@@ -4924,11 +5466,11 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       <div class="footer__dev">Design by <a href="https://pixelcarve.com/" target="_blank" rel="noopener noreferrer">Pixelcarve</a></div>
       
     </div>
-    <p class="footer__text text-two">This website does not constitute an offer to sell, nor a solicitation of an offer to buy, any securities, nor shall it form the basis of, or be relied on in connection with, or act as an inducement to enter into, any contract or commitment whatsoever.
+    <!-- <p class="footer__text text-two">This website does not constitute an offer to sell, nor a solicitation of an offer to buy, any securities, nor shall it form the basis of, or be relied on in connection with, or act as an inducement to enter into, any contract or commitment whatsoever.
 Visitors to this website who are considering making an investment in a specific securities offering are reminded that they must not make any decision on the basis of information contained in this website but, rather, only on the confidential offering memorandum relating to that particular securities offering. For private placements in the United States, any offering of securities can only be made to accredited investors and pursuant to an appropriate exemption from registration under the securities act of 1933, as amended, and applicable state law. Past performance is not an indicator of future performance. All investments are subject to risk, including the possible loss of principal.
 Securities transactions conducted through <a href="https://www.stonehaven-llc.com/" target="_blank" rel="noopener noreferrer">Stonehaven, LLC</a>, member of <a href="https://www.finra.org/#/" target="_blank" rel="noopener noreferrer">FINRA</a> and <a href="https://www.sipc.org/" target="_blank" rel="noopener noreferrer">SIPC</a>. Check the background of Stonehaven, LLC, on <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener noreferrer">FINRA’s Brokercheck</a>.
 All financial information presented in this website are presented in Canadian dollars unless otherwise specified.
-</p>
+</p> -->
   </div>
 </footer>
 
