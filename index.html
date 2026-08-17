@@ -749,6 +749,163 @@ body .BambooHR-ATS-board h2 {
 
 
 
+  <!-- Brands Auto Scroller Section (As Seen On / Featured In Top Publications) -->
+  <style>
+    .cpi-brands-scroller-section {
+      width: 100%;
+      background: #fbfbfb;
+      padding: 70px 0 80px;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      box-sizing: border-box;
+    }
+
+    .cpi-brands-container {
+      width: 100%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+
+    .cpi-brands-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .cpi-brands-subtitle {
+      display: inline-block;
+      font-family: 'WorkSans', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #4A517F;
+      margin-bottom: 8px;
+    }
+
+    .cpi-brands-title {
+      font-family: 'TTRamillas', serif;
+      font-size: 2.1rem;
+      line-height: 120%;
+      color: #232323;
+      letter-spacing: -0.02em;
+      margin: 0;
+    }
+
+    .cpi-brands-marquee-wrapper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+      padding: 10px 0;
+    }
+
+    .cpi-brands-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: cpi-brands-marquee 24s linear infinite;
+    }
+
+    .cpi-brands-track:hover {
+      animation-play-state: paused;
+    }
+
+    .cpi-brand-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 55px;
+      height: 110px;
+      transition: transform 0.3s ease;
+    }
+
+    .cpi-brand-item img {
+      max-height: 80px;
+      max-width: 240px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      filter: grayscale(100%) opacity(0.75);
+      transition: all 0.35s ease;
+    }
+
+    .cpi-brand-item:hover img {
+      filter: grayscale(0%) opacity(1);
+      transform: scale(1.08);
+    }
+
+    @keyframes cpi-brands-marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-33.333333%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .cpi-brands-scroller-section {
+        padding: 50px 0 55px;
+      }
+      .cpi-brands-header {
+        margin-bottom: 28px;
+      }
+      .cpi-brands-title {
+        font-size: 1.6rem;
+      }
+      .cpi-brand-item {
+        padding: 0 28px;
+        height: 75px;
+      }
+      .cpi-brand-item img {
+        max-height: 48px;
+        max-width: 150px;
+      }
+    }
+  </style>
+
+  <div class="cpi-brands-scroller-section">
+    <div class="cpi-brands-container">
+      <div class="cpi-brands-header">
+        <span class="cpi-brands-subtitle">As Seen On</span>
+        <h3 class="cpi-brands-title">Featured In Top Publications</h3>
+      </div>
+      <div class="cpi-brands-marquee-wrapper">
+        <div class="cpi-brands-track">
+          <!-- Set 1 -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+
+          <!-- Set 2 (for seamless infinite loop) -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+
+          <!-- Set 3 (ensuring full coverage on ultrawide monitors) -->
+          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
+          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
+          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
+          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
+          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
+          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div data-scroll="block-1" class="about-block  about-block_left about-block_style-one about-block_color-one about-block_size-one">
   
 
@@ -3052,146 +3209,421 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 
       
 
+      <style>
+        /* Fix Card Container & Text Height to Prevent Overflow */
+        .featured__item {
+          height: auto !important;
+          min-height: 460px !important;
+          overflow: hidden !important;
+          border-radius: 14px !important;
+          background: #ffffff !important;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: flex-start !important;
+          align-items: stretch !important;
+          margin-top: 40px !important;
+          transition: transform 0.35s ease, box-shadow 0.35s ease !important;
+        }
+        .featured__item:hover {
+          transform: translateY(-8px) scale(1) !important;
+          box-shadow: 0 20px 45px rgba(0, 0, 0, 0.16) !important;
+        }
+        .featured:not(.featured_small) .featured__item:first-child,
+        .featured:not(.featured_small) .featured__item:nth-child(2),
+        .featured:not(.featured_small) .featured__item:nth-child(3),
+        .featured:not(.featured_small) .featured__item:nth-child(4) {
+          margin-top: 40px !important;
+          height: auto !important;
+        }
+        .featured:not(.featured_small) .featured__item:first-child .featured__item-bg,
+        .featured:not(.featured_small) .featured__item:nth-child(2) .featured__item-bg,
+        .featured:not(.featured_small) .featured__item:nth-child(3) .featured__item-bg,
+        .featured:not(.featured_small) .featured__item:nth-child(4) .featured__item-bg,
+        .featured__item-bg {
+          height: 230px !important;
+          min-height: 230px !important;
+          width: 100% !important;
+          flex-shrink: 0 !important;
+          position: relative !important;
+          background-size: cover !important;
+          background-position: center !important;
+        }
+        .featured__item-text {
+          height: auto !important;
+          min-height: auto !important;
+          padding: 22px 24px 26px !important;
+          background: #ffffff !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: flex-start !important;
+          align-items: flex-start !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+          flex: 1 0 auto !important;
+        }
+        .featured__item-top {
+          width: 100% !important;
+          display: flex !important;
+          justify-content: space-between !important;
+          align-items: flex-start !important;
+          margin-bottom: 6px !important;
+        }
+        .featured__item-title {
+          font-size: 1.15rem !important;
+          font-weight: 700 !important;
+          color: #0f172a !important;
+          line-height: 1.3 !important;
+        }
+        .featured__item-address {
+          margin-top: 4px !important;
+          color: #64748b !important;
+          font-size: 0.92rem !important;
+        }
+
+        /* Open / Closed Status Badge */
+        .cpi-opp-status {
+          position: absolute;
+          top: 14px;
+          left: 14px;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 5px 12px;
+          border-radius: 9999px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.06em;
+          text-transform: uppercase;
+          z-index: 5;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+          backdrop-filter: blur(8px);
+          -webkit-backdrop-filter: blur(8px);
+        }
+        .cpi-status-open {
+          background: rgba(16, 185, 129, 0.95);
+          color: #ffffff;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+        .cpi-status-open::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #ffffff;
+          box-shadow: 0 0 6px #ffffff;
+        }
+        .cpi-status-closed {
+          background: rgba(30, 41, 59, 0.85);
+          color: #cbd5e1;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .cpi-status-closed::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #94a3b8;
+        }
+
+        /* Financial Metrics & Investment Amount Details */
+        .cpi-opp-details {
+          margin-top: 14px;
+          padding-top: 14px;
+          border-top: 1px solid rgba(0, 0, 0, 0.08);
+          width: 100%;
+          display: block !important;
+          box-sizing: border-box !important;
+        }
+        .cpi-opp-amount {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-size: 22px;
+          font-weight: 800;
+          color: #0f172a;
+          letter-spacing: -0.02em;
+          margin-bottom: 12px;
+          line-height: 1.2;
+        }
+        .cpi-opp-metrics {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px 8px;
+          width: 100%;
+        }
+        .cpi-opp-metric {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+        .cpi-metric-label {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-size: 11px;
+          font-weight: 500;
+          color: #64748b;
+          line-height: 1.25;
+        }
+        .cpi-metric-val {
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          color: #0f172a;
+          letter-spacing: -0.01em;
+        }
+      </style>
+
       <div class="featured__items">
 
-        
-                    
-              
-              <a href="#" class="featured__item">
+        <!-- ================= CARD 1: ATLAS AT LEWISVILLE ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/Garrison.png);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-open">Open</span>
+          </div>
 
-                                  
-                  
-                  <div class="featured__item-bg" style="background-image: url(images/Garrison.png);"></div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Atlas at Lewisville</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                
-                <div class="featured__item-text">
+            <div class="featured__item-address text-one">Dallas, Texas | Equity</div>
 
-                  <div class="featured__item-top">
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$9,000,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$50 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Equity Multiple</span>
+                  <span class="cpi-metric-val">1.93x</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">18.5%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                    <div class="featured__item-title title-five">Ordnance (Garrison Point)</div>
+        <!-- ================= CARD 2: APOLLO MEADOWS ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/cSalesforce-Project-Tiles-Hero-Images-467x350.png);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-open">Open</span>
+          </div>
 
-                    <div class="featured__item-button">
-                      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
-                      </svg>
-                        
-                    </div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Apollo Meadows</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                  </div>
+            <div class="featured__item-address text-one">San Antonio, Texas | Equity</div>
 
-                  
-                  <div class="featured__item-address text-one">Dallas, Texas | Equity</div>
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$2,700,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$50 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Equity Multiple</span>
+                  <span class="cpi-metric-val">1.31x</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">26.7%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                                  </div>
-                
-              </a>
-                
-            
-              
-              <a href="" class="featured__item">
+        <!-- ================= CARD 3: Apollo Oaks ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/Apollo-Oaks.jpg);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-closed">Closed</span>
+          </div>
 
-                                  
-                  
-                  <div class="featured__item-bg" style="background-image: url(images/cSalesforce-Project-Tiles-Hero-Images-467x350.png);"></div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Apollo Oaks</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                
-                <div class="featured__item-text">
+            <div class="featured__item-address text-one">San Antonio, Texas | Equity</div>
 
-                  <div class="featured__item-top">
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$3,400,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$50 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Equity Multiple</span>
+                  <span class="cpi-metric-val">1.51x</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">27%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                    <div class="featured__item-title title-five">APOLLO MEADOWS</div>
+        <!-- ================= CARD 4: Atlas at Bay Point ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/Atlas-at-Bay-Point-1-1024x677.jpg.webp);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-closed">Closed</span>
+          </div>
 
-                    <div class="featured__item-button">
-                      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
-                      </svg>
-                        
-                    </div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Atlas at Bay Point</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                  </div>
+            <div class="featured__item-address text-one">St. Petersburg Tampa MSA | Florida</div>
 
-                  
-                  <div class="featured__item-address text-one">San Antonio, Texas | Equity</div>
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$10,500,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$50 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Distributions</span>
+                  <span class="cpi-metric-val">Quarterly</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">21.04%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                                  </div>
-                
-              </a>
-                
-            
-              
-              <a href="https://greybrook.com/portfolio/mcmichael-estates-kleinburg-estates/" class="featured__item">
+ <!-- ================= CARD 5: PARC AT CHAMPION FOREST ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/Parc-at-Champion-Forest-1.jpg);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-closed">Closed</span>
+          </div>
 
-                                  
-                  
-                  <div class="featured__item-bg" style="background-image: url(images/kleinburg-estate-mcmichael-estates-gallery-image-2-500x350.jpg);"></div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Parc at Champion Forest</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                
-                <div class="featured__item-text">
+            <div class="featured__item-address text-one">Houston, Texas | Equity</div>
 
-                  <div class="featured__item-top">
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$8,650,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$50 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Distributions</span>
+                  <span class="cpi-metric-val">Monthly</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">18.7%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                    <div class="featured__item-title title-five">Kleinburg Estates (McMichael Estates)</div>
+ <!-- ================= CARD 6: BLUEWATER APARTMENTS ================= -->
+        <a href="#" class="featured__item">
+          <div class="featured__item-bg" style="background-image: url(images/BlueWater-Apartment-055.jpg);">
+            <!-- Status Pill: change to 'cpi-status-open' or 'cpi-status-closed' -->
+            <span class="cpi-opp-status cpi-status-closed">Closed</span>
+          </div>
 
-                    <div class="featured__item-button">
-                      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
-                      </svg>
-                        
-                    </div>
+          <div class="featured__item-text">
+            <div class="featured__item-top">
+              <div class="featured__item-title title-five">Blue Water Apartments</div>
+              <div class="featured__item-button">
+                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
 
-                  </div>
+            <div class="featured__item-address text-one">Charleston, South Carolina | Equity</div>
 
-                  
-                  <div class="featured__item-address text-one">Kipling Avenue & Teston Road, Vaughan, ON, Canada</div>
+            <!-- Opportunity Financials & Returns -->
+            <div class="cpi-opp-details">
+              <div class="cpi-opp-amount">$28,000,000</div>
+              <div class="cpi-opp-metrics">
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Minimum</span>
+                  <span class="cpi-metric-val">$25 k</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Distributions</span>
+                  <span class="cpi-metric-val">Monthly</span>
+                </div>
+                <div class="cpi-opp-metric">
+                  <span class="cpi-metric-label">Annualized Returns</span>
+                  <span class="cpi-metric-val">23.8%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
 
-                                  </div>
-                
-              </a>
-                
-            
-              
-              <a href="https://greybrook.com/portfolio/storybrook-in-the-town-of-fergus-fergus/" class="featured__item">
-
-                                  
-                  
-                  <div class="featured__item-bg" style="background-image: url(images/Phase-1-Homes-Built-and-Occupied-at-Storybrook-in-Fergus-gallery-500x206.png);"></div>
-
-                
-                <div class="featured__item-text">
-
-                  <div class="featured__item-top">
-
-                    <div class="featured__item-title title-five">Storybrook In The Town Of Fergus (Fergus)</div>
-
-                    <div class="featured__item-button">
-                      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9023 4.05193C11.9023 4.39718 11.6225 4.67705 11.2772 4.67705L1.38529 4.67705C1.04005 4.67705 0.760174 4.39718 0.760174 4.05193C0.760174 3.70669 1.04005 3.42682 1.38529 3.42682L11.2772 3.42682C11.6225 3.42682 11.9023 3.70669 11.9023 4.05193Z" fill="white"></path>
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8169 3.60971C13.061 3.85383 13.061 4.24963 12.8169 4.49376L9.51959 7.79107C9.27547 8.03519 8.87967 8.03519 8.63555 7.79107C8.39142 7.54695 8.39142 7.15114 8.63555 6.90702L11.4908 4.05173L8.63555 1.19644C8.39142 0.952319 8.39142 0.556518 8.63555 0.312395C8.87967 0.0682721 9.27547 0.0682721 9.51959 0.312395L12.8169 3.60971Z" fill="white"></path>
-                      </svg>
-                        
-                    </div>
-
-                  </div>
-
-                  
-                  <div class="featured__item-address text-one">6586 Beatty Line North, Fergus, ON, Canada</div>
-
-                                  </div>
-                
-              </a>
-                
-                                  
-        
-        
 
       </div>
-      
 
-      
-      <a href="/portfolio" class="button button_white">Explore Portfolio</a>
+      <a href="#" class="button button_white">Explore Portfolio</a>
 
           </div>
   </div>
@@ -5152,162 +5584,7 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     </div>
   </div>
 
-  <!-- Brands Auto Scroller Section -->
-  <style>
-    .cpi-brands-scroller-section {
-      width: 100%;
-      background: #fbfbfb;
-      padding: 70px 0 80px;
-      overflow: hidden;
-      position: relative;
-      border-top: 1px solid rgba(0, 0, 0, 0.06);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-      box-sizing: border-box;
-    }
 
-    .cpi-brands-container {
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 40px;
-      box-sizing: border-box;
-    }
-
-    .cpi-brands-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .cpi-brands-subtitle {
-      display: inline-block;
-      font-family: 'WorkSans', sans-serif;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: #4A517F;
-      margin-bottom: 8px;
-    }
-
-    .cpi-brands-title {
-      font-family: 'TTRamillas', serif;
-      font-size: 2.1rem;
-      line-height: 120%;
-      color: #232323;
-      letter-spacing: -0.02em;
-      margin: 0;
-    }
-
-    .cpi-brands-marquee-wrapper {
-      width: 100%;
-      overflow: hidden;
-      position: relative;
-      mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-      padding: 10px 0;
-    }
-
-    .cpi-brands-track {
-      display: flex;
-      align-items: center;
-      width: max-content;
-      animation: cpi-brands-marquee 24s linear infinite;
-    }
-
-    .cpi-brands-track:hover {
-      animation-play-state: paused;
-    }
-
-    .cpi-brand-item {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 55px;
-      height: 110px;
-      transition: transform 0.3s ease;
-    }
-
-    .cpi-brand-item img {
-      max-height: 80px;
-      max-width: 240px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      filter: grayscale(100%) opacity(0.75);
-      transition: all 0.35s ease;
-    }
-
-    .cpi-brand-item:hover img {
-      filter: grayscale(0%) opacity(1);
-      transform: scale(1.08);
-    }
-
-    @keyframes cpi-brands-marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-33.333333%);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .cpi-brands-scroller-section {
-        padding: 50px 0 55px;
-      }
-      .cpi-brands-header {
-        margin-bottom: 28px;
-      }
-      .cpi-brands-title {
-        font-size: 1.6rem;
-      }
-      .cpi-brand-item {
-        padding: 0 28px;
-        height: 75px;
-      }
-      .cpi-brand-item img {
-        max-height: 48px;
-        max-width: 150px;
-      }
-    }
-  </style>
-
-  <div class="cpi-brands-scroller-section">
-    <div class="cpi-brands-container">
-      <div class="cpi-brands-header">
-        <span class="cpi-brands-subtitle">As Seen On</span>
-        <h3 class="cpi-brands-title">Featured In Top Publications</h3>
-      </div>
-      <div class="cpi-brands-marquee-wrapper">
-        <div class="cpi-brands-track">
-          <!-- Set 1 -->
-          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
-          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
-          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
-          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
-          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
-          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
-
-          <!-- Set 2 (for seamless infinite loop) -->
-          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
-          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
-          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
-          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
-          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
-          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
-
-          <!-- Set 3 (ensuring full coverage on ultrawide monitors) -->
-          <div class="cpi-brand-item"><img src="images/brands/yahoo.png" alt="Yahoo Finance"></div>
-          <div class="cpi-brand-item"><img src="images/brands/storeys-1.png" alt="Storeys"></div>
-          <div class="cpi-brand-item"><img src="images/brands/mhn.png" alt="Multi-Housing News"></div>
-          <div class="cpi-brand-item"><img src="images/brands/bcbusiness-2.png" alt="BC Business"></div>
-          <div class="cpi-brand-item"><img src="images/brands/san-antonio.png" alt="San Antonio"></div>
-          <div class="cpi-brand-item"><img src="images/brands/st-pete-rising.png" alt="St. Pete Rising"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <footer data-scroll="footer" id="footer" class="footer">
   <div class="footer__bg">
@@ -5442,37 +5719,119 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
 <li class="footer__menu-link"><a href="https://greybrook.com/privacy-policy/">Privacy Policy</a></li>
 <li class="footer__menu-link"><a href="https://greybrook.com/terms-of-use/">Terms of Use</a></li>
 </ul>      </nav>
-          </div>
+    </div>
+
+    <!-- Bold Typewriter Legal Disclaimer -->
+    <style>
+      .footer__text.text-two {
+        font-family: 'WorkSans', sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 0.84rem !important;
+        line-height: 1.7 !important;
+        color: #1e293b !important;
+        letter-spacing: 0.01em !important;
+        opacity: 1 !important;
+        margin-top: 40px !important;
+        margin-bottom: 25px !important;
+        min-height: 90px;
+        position: relative;
+      }
+      .cpi-type-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1.1em;
+        background-color: #00DFD8;
+        vertical-align: text-bottom;
+        margin-left: 3px;
+        animation: cpi-blink 0.75s infinite;
+      }
+      .cpi-type-cursor.is-hidden {
+        display: none;
+      }
+      @keyframes cpi-blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .footer__middle {
+        margin-top: 30px !important;
+        padding-top: 25px !important;
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+      }
+    </style>
+
+    <p id="cpiFooterLegalText" class="footer__text text-two"><span id="cpiTypedContent"></span><span id="cpiTypeCursor" class="cpi-type-cursor"></span></p>
+
+    <script>
+      (function() {
+        const fullText = "The commentary and the information contained above and on this website or other marketing material are for educational and informational purposes only and do not constitute an offer to sell, or a solicitation of an offer to buy, any securities or related financial instruments. All Canadian securities are sold through CPI Capital EMD FrontFundr. Past performance does not guarantee future results. Please refer to the Subscription Agreement / Private Placement Memorandum for a complete description of the risks, fees, redemption information and potential conflict of interests. Currently CPI Capital investments are reserved for Accredited investors. Click here to learn what Accredited investors are. The investor accreditation, suitability and KYC (Know Your Client) are completed through CPI Capital EMD FrontFundr.";
+        const target = document.getElementById('cpiTypedContent');
+        const cursor = document.getElementById('cpiTypeCursor');
+        const container = document.getElementById('cpiFooterLegalText');
+        if (!target || !container) return;
+
+        let hasTyped = false;
+
+        function startTyping() {
+          if (hasTyped) return;
+          hasTyped = true;
+
+          let index = 0;
+          const speed = 12; // ms per batch
+          const charsPerTick = 2; // smooth and brisk
+
+          const timer = setInterval(() => {
+            index += charsPerTick;
+            if (index >= fullText.length) {
+              target.textContent = fullText;
+              clearInterval(timer);
+              setTimeout(() => {
+                if (cursor) cursor.classList.add('is-hidden');
+              }, 2500);
+            } else {
+              target.textContent = fullText.slice(0, index);
+            }
+          }, speed);
+        }
+
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                startTyping();
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15 });
+          observer.observe(container);
+        } else {
+          startTyping();
+        }
+      })();
+    </script>
+
+    <!-- Bottom Row (Copyright, Social Links & Dev Credits) -->
     <div class="footer__middle">
       
-      <div class="footer__copyright">© 2026 Greybrook Realty Partners. All rights reserved.</div>
+      <div class="footer__copyright">© 2026 CPI Capital. All rights reserved.</div>
 
-
-      
       <div class="footer__social">
+        
+          <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11.2534 7.18988V11.2537H9.0022V7.46205C9.0022 6.50956 8.67658 5.85953 7.86171 5.85953C7.23966 5.85953 6.86948 6.29761 6.70663 6.72137C6.64724 6.87286 6.63195 7.08372 6.63195 7.29578V11.2537H4.37997C4.37997 11.2537 4.4103 4.83191 4.37997 4.16657H6.63173V5.17114C6.62716 5.17865 6.62123 5.18675 6.61693 5.19404H6.63173V5.17114C6.9309 4.68893 7.46518 4.00008 8.66107 4.00008C10.1427 4.00005 11.2534 5.013 11.2534 7.18988ZM2.0243 0.750244C1.2539 0.750244 0.75 1.27907 0.75 1.97449C0.75 2.65475 1.23933 3.19962 1.99441 3.19962H2.00946C2.79478 3.19962 3.28317 2.65485 3.28317 1.97449C3.26838 1.27907 2.79478 0.750244 2.0243 0.750244ZM0.883748 11.2537H3.13487V4.16657H0.883748V11.2537Z" fill="#292929"></path></svg> </a>
 
         
-          <a href="https://www.linkedin.com/company/greybrook-realty-partners" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11.2534 7.18988V11.2537H9.0022V7.46205C9.0022 6.50956 8.67658 5.85953 7.86171 5.85953C7.23966 5.85953 6.86948 6.29761 6.70663 6.72137C6.64724 6.87286 6.63195 7.08372 6.63195 7.29578V11.2537H4.37997C4.37997 11.2537 4.4103 4.83191 4.37997 4.16657H6.63173V5.17114C6.62716 5.17865 6.62123 5.18675 6.61693 5.19404H6.63173V5.17114C6.9309 4.68893 7.46518 4.00008 8.66107 4.00008C10.1427 4.00005 11.2534 5.013 11.2534 7.18988ZM2.0243 0.750244C1.2539 0.750244 0.75 1.27907 0.75 1.97449C0.75 2.65475 1.23933 3.19962 1.99441 3.19962H2.00946C2.79478 3.19962 3.28317 2.65485 3.28317 1.97449C3.26838 1.27907 2.79478 0.750244 2.0243 0.750244ZM0.883748 11.2537H3.13487V4.16657H0.883748V11.2537Z" fill="#292929"></path></svg> </a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"><path d="M9.96094 1.43921H5.03906C2.77418 1.43921 0.9375 3.27589 0.9375 5.54077V10.4626C0.9375 12.7275 2.77418 14.5642 5.03906 14.5642H9.96094C12.2258 14.5642 14.0625 12.7275 14.0625 10.4626V5.54077C14.0625 3.27589 12.2258 1.43921 9.96094 1.43921ZM12.832 10.4626C12.832 12.0458 11.5441 13.3337 9.96094 13.3337H5.03906C3.45586 13.3337 2.16797 12.0458 2.16797 10.4626V5.54077C2.16797 3.95757 3.45586 2.66968 5.03906 2.66968H9.96094C11.5441 2.66968 12.832 3.95757 12.832 5.54077V10.4626Z" fill="#292929"></path><path d="M7.5 4.72046C5.68793 4.72046 4.21875 6.18964 4.21875 8.00171C4.21875 9.81378 5.68793 11.283 7.5 11.283C9.31207 11.283 10.7812 9.81378 10.7812 8.00171C10.7812 6.18964 9.31207 4.72046 7.5 4.72046ZM7.5 10.0525C6.36961 10.0525 5.44922 9.1321 5.44922 8.00171C5.44922 6.8705 6.36961 5.95093 7.5 5.95093C8.63039 5.95093 9.55078 6.8705 9.55078 8.00171C9.55078 9.1321 8.63039 10.0525 7.5 10.0525Z" fill="#292929"></path><path d="M11.0273 4.91159C11.2688 4.91159 11.4646 4.71584 11.4646 4.47437C11.4646 4.23289 11.2688 4.03714 11.0273 4.03714C10.7859 4.03714 10.5901 4.23289 10.5901 4.47437C10.5901 4.71584 10.7859 4.91159 11.0273 4.91159Z" fill="#292929"></path></svg> </a>
 
         
-          <a href="https://www.instagram.com/greybrook/" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"><path d="M9.96094 1.43921H5.03906C2.77418 1.43921 0.9375 3.27589 0.9375 5.54077V10.4626C0.9375 12.7275 2.77418 14.5642 5.03906 14.5642H9.96094C12.2258 14.5642 14.0625 12.7275 14.0625 10.4626V5.54077C14.0625 3.27589 12.2258 1.43921 9.96094 1.43921ZM12.832 10.4626C12.832 12.0458 11.5441 13.3337 9.96094 13.3337H5.03906C3.45586 13.3337 2.16797 12.0458 2.16797 10.4626V5.54077C2.16797 3.95757 3.45586 2.66968 5.03906 2.66968H9.96094C11.5441 2.66968 12.832 3.95757 12.832 5.54077V10.4626Z" fill="#292929"></path><path d="M7.5 4.72046C5.68793 4.72046 4.21875 6.18964 4.21875 8.00171C4.21875 9.81378 5.68793 11.283 7.5 11.283C9.31207 11.283 10.7812 9.81378 10.7812 8.00171C10.7812 6.18964 9.31207 4.72046 7.5 4.72046ZM7.5 10.0525C6.36961 10.0525 5.44922 9.1321 5.44922 8.00171C5.44922 6.8705 6.36961 5.95093 7.5 5.95093C8.63039 5.95093 9.55078 6.8705 9.55078 8.00171C9.55078 9.1321 8.63039 10.0525 7.5 10.0525Z" fill="#292929"></path><path d="M11.0273 4.91159C11.2688 4.91159 11.4646 4.71584 11.4646 4.47437C11.4646 4.23289 11.2688 4.03714 11.0273 4.03714C10.7859 4.03714 10.5901 4.23289 10.5901 4.47437C10.5901 4.71584 10.7859 4.91159 11.0273 4.91159Z" fill="#292929"></path></svg> </a>
-
-        
-          <a href="https://www.youtube.com/channel/UCam7BqiscaIyYGrGPSU_p4Q" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76123 7.51906L8.00212 5.88216L4.76123 4.22561V7.51906ZM6 1.875C6.74996 1.875 7.47425 1.88482 8.17287 1.90446C8.8715 1.92411 9.38374 1.94484 9.70961 1.96667L10.1984 1.99286C10.2029 1.99286 10.2408 1.99613 10.3123 2.00268C10.3837 2.00923 10.435 2.01577 10.4663 2.02232C10.4975 2.02887 10.55 2.03869 10.6236 2.05179C10.6973 2.06488 10.7609 2.08234 10.8145 2.10417C10.868 2.12599 10.9305 2.15436 11.002 2.18929C11.0734 2.22421 11.1426 2.26677 11.2095 2.31696C11.2765 2.36716 11.3412 2.425 11.4037 2.49048C11.4305 2.51667 11.4651 2.55704 11.5075 2.61161C11.5499 2.66617 11.6146 2.79385 11.7017 2.99464C11.7887 3.19544 11.8479 3.41587 11.8791 3.65595C11.9148 3.93532 11.9427 4.23323 11.9628 4.5497C11.9829 4.86617 11.9952 5.11389 11.9997 5.29286V6.44524C12.0041 7.07818 11.964 7.71111 11.8791 8.34405C11.8479 8.58413 11.7921 8.80129 11.7117 8.99554C11.6314 9.18978 11.56 9.32401 11.4975 9.39821L11.4037 9.50952C11.3412 9.575 11.2765 9.63284 11.2095 9.68304C11.1426 9.73323 11.0734 9.7747 11.002 9.80744C10.9305 9.84018 10.868 9.86746 10.8145 9.88929C10.7609 9.91111 10.6973 9.92857 10.6236 9.94167C10.55 9.95476 10.4964 9.96458 10.4629 9.97113C10.4294 9.97768 10.3781 9.98423 10.3089 9.99077C10.2397 9.99732 10.2029 10.0006 10.1984 10.0006C9.07795 10.0835 7.67849 10.125 6 10.125C5.07594 10.1163 4.27354 10.1021 3.59277 10.0824C2.912 10.0628 2.46448 10.0464 2.25021 10.0333L1.9221 10.0071L1.68104 9.98095C1.52034 9.95913 1.39869 9.9373 1.31611 9.91548C1.23352 9.89365 1.11969 9.84782 0.974611 9.77798C0.829529 9.70813 0.703421 9.61865 0.596284 9.50952C0.569499 9.48333 0.534903 9.44296 0.492495 9.38839C0.450086 9.33383 0.385358 9.20615 0.298309 9.00536C0.21126 8.80456 0.152112 8.58413 0.120864 8.34405C0.0851513 8.06468 0.0572514 7.76677 0.0371631 7.4503C0.0170748 7.13383 0.00479887 6.88611 0.000334809 6.70714V5.55476C-0.00412925 4.92182 0.0360467 4.28889 0.120864 3.65595C0.152112 3.41587 0.207912 3.19871 0.288265 3.00446C0.368618 2.81022 0.440042 2.67599 0.502539 2.60179L0.596284 2.49048C0.658781 2.425 0.723508 2.36716 0.790469 2.31696C0.85743 2.26677 0.926622 2.22421 0.998047 2.18929C1.06947 2.15436 1.13197 2.12599 1.18554 2.10417C1.23911 2.08234 1.30272 2.06488 1.37637 2.05179C1.45003 2.03869 1.50248 2.02887 1.53373 2.02232C1.56498 2.01577 1.61632 2.00923 1.68774 2.00268C1.75917 1.99613 1.79711 1.99286 1.80157 1.99286C2.92205 1.91429 4.32151 1.875 6 1.875Z" fill="#292929"></path></svg> </a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76123 7.51906L8.00212 5.88216L4.76123 4.22561V7.51906ZM6 1.875C6.74996 1.875 7.47425 1.88482 8.17287 1.90446C8.8715 1.92411 9.38374 1.94484 9.70961 1.96667L10.1984 1.99286C10.2029 1.99286 10.2408 1.99613 10.3123 2.00268C10.3837 2.00923 10.435 2.01577 10.4663 2.02232C10.4975 2.02887 10.55 2.03869 10.6236 2.05179C10.6973 2.06488 10.7609 2.08234 10.8145 2.10417C10.868 2.12599 10.9305 2.15436 11.002 2.18929C11.0734 2.22421 11.1426 2.26677 11.2095 2.31696C11.2765 2.36716 11.3412 2.425 11.4037 2.49048C11.4305 2.51667 11.4651 2.55704 11.5075 2.61161C11.5499 2.66617 11.6146 2.79385 11.7017 2.99464C11.7887 3.19544 11.8479 3.41587 11.8791 3.65595C11.9148 3.93532 11.9427 4.23323 11.9628 4.5497C11.9829 4.86617 11.9952 5.11389 11.9997 5.29286V6.44524C12.0041 7.07818 11.964 7.71111 11.8791 8.34405C11.8479 8.58413 11.7921 8.80129 11.7117 8.99554C11.6314 9.18978 11.56 9.32401 11.4975 9.39821L11.4037 9.50952C11.3412 9.575 11.2765 9.63284 11.2095 9.68304C11.1426 9.73323 11.0734 9.7747 11.002 9.80744C10.9305 9.84018 10.868 9.86746 10.8145 9.88929C10.7609 9.91111 10.6973 9.92857 10.6236 9.94167C10.55 9.95476 10.4964 9.96458 10.4629 9.97113C10.4294 9.97768 10.3781 9.98423 10.3089 9.99077C10.2397 9.99732 10.2029 10.0006 10.1984 10.0006C9.07795 10.0835 7.67849 10.125 6 10.125C5.07594 10.1163 4.27354 10.1021 3.59277 10.0824C2.912 10.0628 2.46448 10.0464 2.25021 10.0333L1.9221 10.0071L1.68104 9.98095C1.52034 9.95913 1.39869 9.9373 1.31611 9.91548C1.23352 9.89365 1.11969 9.84782 0.974611 9.77798C0.829529 9.70813 0.703421 9.61865 0.596284 9.50952C0.569499 9.48333 0.534903 9.44296 0.492495 9.38839C0.450086 9.33383 0.385358 9.20615 0.298309 9.00536C0.21126 8.80456 0.152112 8.58413 0.120864 8.34405C0.0851513 8.06468 0.0572514 7.76677 0.0371631 7.4503C0.0170748 7.13383 0.00479887 6.88611 0.000334809 6.70714V5.55476C-0.00412925 4.92182 0.0360467 4.28889 0.120864 3.65595C0.152112 3.41587 0.207912 3.19871 0.288265 3.00446C0.368618 2.81022 0.440042 2.67599 0.502539 2.60179L0.596284 2.49048C0.658781 2.425 0.723508 2.36716 0.790469 2.31696C0.85743 2.26677 0.926622 2.22421 0.998047 2.18929C1.06947 2.15436 1.13197 2.12599 1.18554 2.10417C1.23911 2.08234 1.30272 2.06488 1.37637 2.05179C1.45003 2.03869 1.50248 2.02887 1.53373 2.02232C1.56498 2.01577 1.61632 2.00923 1.68774 2.00268C1.75917 1.99613 1.79711 1.99286 1.80157 1.99286C2.92205 1.91429 4.32151 1.875 6 1.875Z" fill="#292929"></path></svg> </a>
 
         
       </div>
 
       
 
-      <div class="footer__dev">Design by <a href="https://pixelcarve.com/" target="_blank" rel="noopener noreferrer">Pixelcarve</a></div>
+      <div class="footer__dev">Design by <a href="" target="_blank" rel="noopener noreferrer">Apex-info Serve</a></div>
       
     </div>
-    <!-- <p class="footer__text text-two">This website does not constitute an offer to sell, nor a solicitation of an offer to buy, any securities, nor shall it form the basis of, or be relied on in connection with, or act as an inducement to enter into, any contract or commitment whatsoever.
-Visitors to this website who are considering making an investment in a specific securities offering are reminded that they must not make any decision on the basis of information contained in this website but, rather, only on the confidential offering memorandum relating to that particular securities offering. For private placements in the United States, any offering of securities can only be made to accredited investors and pursuant to an appropriate exemption from registration under the securities act of 1933, as amended, and applicable state law. Past performance is not an indicator of future performance. All investments are subject to risk, including the possible loss of principal.
-Securities transactions conducted through <a href="https://www.stonehaven-llc.com/" target="_blank" rel="noopener noreferrer">Stonehaven, LLC</a>, member of <a href="https://www.finra.org/#/" target="_blank" rel="noopener noreferrer">FINRA</a> and <a href="https://www.sipc.org/" target="_blank" rel="noopener noreferrer">SIPC</a>. Check the background of Stonehaven, LLC, on <a href="https://brokercheck.finra.org/" target="_blank" rel="noopener noreferrer">FINRA’s Brokercheck</a>.
-All financial information presented in this website are presented in Canadian dollars unless otherwise specified.
-</p> -->
   </div>
 </footer>
 
@@ -5667,25 +6026,25 @@ All financial information presented in this website are presented in Canadian do
           <input type="hidden" name="recaptcha_response" class="recaptcha-response">
         </form>
 
-        <a class="menu__lang" data-barba-prevent="" href="/zh-hans/">中文</a>
+        <a class="menu__lang" data-barba-prevent="" href="#">中文</a>
       </div>
 
       <div class="menu__middle">
-        <ul class="menu__links"><li class="menu__link"><a href="https://greybrook.com/">Home</a></li>
-<li class="menu__link"><a href="https://greybrook.com/about/">About</a></li>
-<li class="menu__link"><a href="https://greybrook.com/investing-in-real-estate/">Invest in Real Estate</a>
+        <ul class="menu__links"><li class="menu__link"><a href="#">Home</a></li>
+<li class="menu__link"><a href="#">About</a></li>
+<li class="menu__link"><a href="#">Invest in Real Estate</a>
 <ul class="menu__link-sub-links">
-	<li class="menu__link-sub-link"><a href="https://greybrook.com/us-multifamily-fund/">U.S. Multifamily Fund</a></li>
-	<li class="menu__link-sub-link"><a href="https://greybrook.com/portfolio/">Our Portfolio</a></li>
-	<li class="menu__link-sub-link"><a href="https://greybrook.com/partners/">Partners</a></li>
+	<li class="menu__link-sub-link"><a href="#">U.S. Multifamily Fund</a></li>
+	<li class="menu__link-sub-link"><a href="#">Our Portfolio</a></li>
+	<li class="menu__link-sub-link"><a href="#">Partners</a></li>
 </ul>
 </li>
-<li class="menu__link"><a href="https://greybrook.com/advisors/">Advisors</a></li>
-<li class="menu__link"><a href="https://greybrook.com/blog/">Insights</a></li>
-<li class="menu__link"><a href="https://greybrook.com/about/team/">Our Team</a></li>
-<li class="menu__link"><a href="https://greybrook.com/careers/">Careers</a></li>
-<li class="menu__link"><a href="https://greybrook.com/contact/">Contact Us</a></li>
-<li class="menu__link"><a href="https://portal.greybrook.com/">Investor Portal</a></li>
+<li class="menu__link"><a href="#">Advisors</a></li>
+<li class="menu__link"><a href="#">Insights</a></li>
+<li class="menu__link"><a href="#">Our Team</a></li>
+<li class="menu__link"><a href="#">Careers</a></li>
+<li class="menu__link"><a href="#">Contact Us</a></li>
+<li class="menu__link"><a href="#">Investor Portal</a></li>
 </ul>
         <div class="menu__right">
 
@@ -5753,13 +6112,13 @@ All financial information presented in this website are presented in Canadian do
             <div class="menu__social-wrap">
 
             
-              <a href="https://www.linkedin.com/company/greybrook-realty-partners" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11.2534 7.18988V11.2537H9.0022V7.46205C9.0022 6.50956 8.67658 5.85953 7.86171 5.85953C7.23966 5.85953 6.86948 6.29761 6.70663 6.72137C6.64724 6.87286 6.63195 7.08372 6.63195 7.29578V11.2537H4.37997C4.37997 11.2537 4.4103 4.83191 4.37997 4.16657H6.63173V5.17114C6.62716 5.17865 6.62123 5.18675 6.61693 5.19404H6.63173V5.17114C6.9309 4.68893 7.46518 4.00008 8.66107 4.00008C10.1427 4.00005 11.2534 5.013 11.2534 7.18988ZM2.0243 0.750244C1.2539 0.750244 0.75 1.27907 0.75 1.97449C0.75 2.65475 1.23933 3.19962 1.99441 3.19962H2.00946C2.79478 3.19962 3.28317 2.65485 3.28317 1.97449C3.26838 1.27907 2.79478 0.750244 2.0243 0.750244ZM0.883748 11.2537H3.13487V4.16657H0.883748V11.2537Z" fill="#292929"></path></svg> </a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11.2534 7.18988V11.2537H9.0022V7.46205C9.0022 6.50956 8.67658 5.85953 7.86171 5.85953C7.23966 5.85953 6.86948 6.29761 6.70663 6.72137C6.64724 6.87286 6.63195 7.08372 6.63195 7.29578V11.2537H4.37997C4.37997 11.2537 4.4103 4.83191 4.37997 4.16657H6.63173V5.17114C6.62716 5.17865 6.62123 5.18675 6.61693 5.19404H6.63173V5.17114C6.9309 4.68893 7.46518 4.00008 8.66107 4.00008C10.1427 4.00005 11.2534 5.013 11.2534 7.18988ZM2.0243 0.750244C1.2539 0.750244 0.75 1.27907 0.75 1.97449C0.75 2.65475 1.23933 3.19962 1.99441 3.19962H2.00946C2.79478 3.19962 3.28317 2.65485 3.28317 1.97449C3.26838 1.27907 2.79478 0.750244 2.0243 0.750244ZM0.883748 11.2537H3.13487V4.16657H0.883748V11.2537Z" fill="#292929"></path></svg> </a>
 
             
-              <a href="https://www.instagram.com/greybrook/" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"><path d="M9.96094 1.43921H5.03906C2.77418 1.43921 0.9375 3.27589 0.9375 5.54077V10.4626C0.9375 12.7275 2.77418 14.5642 5.03906 14.5642H9.96094C12.2258 14.5642 14.0625 12.7275 14.0625 10.4626V5.54077C14.0625 3.27589 12.2258 1.43921 9.96094 1.43921ZM12.832 10.4626C12.832 12.0458 11.5441 13.3337 9.96094 13.3337H5.03906C3.45586 13.3337 2.16797 12.0458 2.16797 10.4626V5.54077C2.16797 3.95757 3.45586 2.66968 5.03906 2.66968H9.96094C11.5441 2.66968 12.832 3.95757 12.832 5.54077V10.4626Z" fill="#292929"></path><path d="M7.5 4.72046C5.68793 4.72046 4.21875 6.18964 4.21875 8.00171C4.21875 9.81378 5.68793 11.283 7.5 11.283C9.31207 11.283 10.7812 9.81378 10.7812 8.00171C10.7812 6.18964 9.31207 4.72046 7.5 4.72046ZM7.5 10.0525C6.36961 10.0525 5.44922 9.1321 5.44922 8.00171C5.44922 6.8705 6.36961 5.95093 7.5 5.95093C8.63039 5.95093 9.55078 6.8705 9.55078 8.00171C9.55078 9.1321 8.63039 10.0525 7.5 10.0525Z" fill="#292929"></path><path d="M11.0273 4.91159C11.2688 4.91159 11.4646 4.71584 11.4646 4.47437C11.4646 4.23289 11.2688 4.03714 11.0273 4.03714C10.7859 4.03714 10.5901 4.23289 10.5901 4.47437C10.5901 4.71584 10.7859 4.91159 11.0273 4.91159Z" fill="#292929"></path></svg> </a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none"><path d="M9.96094 1.43921H5.03906C2.77418 1.43921 0.9375 3.27589 0.9375 5.54077V10.4626C0.9375 12.7275 2.77418 14.5642 5.03906 14.5642H9.96094C12.2258 14.5642 14.0625 12.7275 14.0625 10.4626V5.54077C14.0625 3.27589 12.2258 1.43921 9.96094 1.43921ZM12.832 10.4626C12.832 12.0458 11.5441 13.3337 9.96094 13.3337H5.03906C3.45586 13.3337 2.16797 12.0458 2.16797 10.4626V5.54077C2.16797 3.95757 3.45586 2.66968 5.03906 2.66968H9.96094C11.5441 2.66968 12.832 3.95757 12.832 5.54077V10.4626Z" fill="#292929"></path><path d="M7.5 4.72046C5.68793 4.72046 4.21875 6.18964 4.21875 8.00171C4.21875 9.81378 5.68793 11.283 7.5 11.283C9.31207 11.283 10.7812 9.81378 10.7812 8.00171C10.7812 6.18964 9.31207 4.72046 7.5 4.72046ZM7.5 10.0525C6.36961 10.0525 5.44922 9.1321 5.44922 8.00171C5.44922 6.8705 6.36961 5.95093 7.5 5.95093C8.63039 5.95093 9.55078 6.8705 9.55078 8.00171C9.55078 9.1321 8.63039 10.0525 7.5 10.0525Z" fill="#292929"></path><path d="M11.0273 4.91159C11.2688 4.91159 11.4646 4.71584 11.4646 4.47437C11.4646 4.23289 11.2688 4.03714 11.0273 4.03714C10.7859 4.03714 10.5901 4.23289 10.5901 4.47437C10.5901 4.71584 10.7859 4.91159 11.0273 4.91159Z" fill="#292929"></path></svg> </a>
 
             
-              <a href="https://www.youtube.com/channel/UCam7BqiscaIyYGrGPSU_p4Q" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76123 7.51906L8.00212 5.88216L4.76123 4.22561V7.51906ZM6 1.875C6.74996 1.875 7.47425 1.88482 8.17287 1.90446C8.8715 1.92411 9.38374 1.94484 9.70961 1.96667L10.1984 1.99286C10.2029 1.99286 10.2408 1.99613 10.3123 2.00268C10.3837 2.00923 10.435 2.01577 10.4663 2.02232C10.4975 2.02887 10.55 2.03869 10.6236 2.05179C10.6973 2.06488 10.7609 2.08234 10.8145 2.10417C10.868 2.12599 10.9305 2.15436 11.002 2.18929C11.0734 2.22421 11.1426 2.26677 11.2095 2.31696C11.2765 2.36716 11.3412 2.425 11.4037 2.49048C11.4305 2.51667 11.4651 2.55704 11.5075 2.61161C11.5499 2.66617 11.6146 2.79385 11.7017 2.99464C11.7887 3.19544 11.8479 3.41587 11.8791 3.65595C11.9148 3.93532 11.9427 4.23323 11.9628 4.5497C11.9829 4.86617 11.9952 5.11389 11.9997 5.29286V6.44524C12.0041 7.07818 11.964 7.71111 11.8791 8.34405C11.8479 8.58413 11.7921 8.80129 11.7117 8.99554C11.6314 9.18978 11.56 9.32401 11.4975 9.39821L11.4037 9.50952C11.3412 9.575 11.2765 9.63284 11.2095 9.68304C11.1426 9.73323 11.0734 9.7747 11.002 9.80744C10.9305 9.84018 10.868 9.86746 10.8145 9.88929C10.7609 9.91111 10.6973 9.92857 10.6236 9.94167C10.55 9.95476 10.4964 9.96458 10.4629 9.97113C10.4294 9.97768 10.3781 9.98423 10.3089 9.99077C10.2397 9.99732 10.2029 10.0006 10.1984 10.0006C9.07795 10.0835 7.67849 10.125 6 10.125C5.07594 10.1163 4.27354 10.1021 3.59277 10.0824C2.912 10.0628 2.46448 10.0464 2.25021 10.0333L1.9221 10.0071L1.68104 9.98095C1.52034 9.95913 1.39869 9.9373 1.31611 9.91548C1.23352 9.89365 1.11969 9.84782 0.974611 9.77798C0.829529 9.70813 0.703421 9.61865 0.596284 9.50952C0.569499 9.48333 0.534903 9.44296 0.492495 9.38839C0.450086 9.33383 0.385358 9.20615 0.298309 9.00536C0.21126 8.80456 0.152112 8.58413 0.120864 8.34405C0.0851513 8.06468 0.0572514 7.76677 0.0371631 7.4503C0.0170748 7.13383 0.00479887 6.88611 0.000334809 6.70714V5.55476C-0.00412925 4.92182 0.0360467 4.28889 0.120864 3.65595C0.152112 3.41587 0.207912 3.19871 0.288265 3.00446C0.368618 2.81022 0.440042 2.67599 0.502539 2.60179L0.596284 2.49048C0.658781 2.425 0.723508 2.36716 0.790469 2.31696C0.85743 2.26677 0.926622 2.22421 0.998047 2.18929C1.06947 2.15436 1.13197 2.12599 1.18554 2.10417C1.23911 2.08234 1.30272 2.06488 1.37637 2.05179C1.45003 2.03869 1.50248 2.02887 1.53373 2.02232C1.56498 2.01577 1.61632 2.00923 1.68774 2.00268C1.75917 1.99613 1.79711 1.99286 1.80157 1.99286C2.92205 1.91429 4.32151 1.875 6 1.875Z" fill="#292929"></path></svg> </a>
+              <a href="#" target="_blank" rel="noopener noreferrer"><!--?xml version="1.0" encoding="UTF-8"?--> <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.76123 7.51906L8.00212 5.88216L4.76123 4.22561V7.51906ZM6 1.875C6.74996 1.875 7.47425 1.88482 8.17287 1.90446C8.8715 1.92411 9.38374 1.94484 9.70961 1.96667L10.1984 1.99286C10.2029 1.99286 10.2408 1.99613 10.3123 2.00268C10.3837 2.00923 10.435 2.01577 10.4663 2.02232C10.4975 2.02887 10.55 2.03869 10.6236 2.05179C10.6973 2.06488 10.7609 2.08234 10.8145 2.10417C10.868 2.12599 10.9305 2.15436 11.002 2.18929C11.0734 2.22421 11.1426 2.26677 11.2095 2.31696C11.2765 2.36716 11.3412 2.425 11.4037 2.49048C11.4305 2.51667 11.4651 2.55704 11.5075 2.61161C11.5499 2.66617 11.6146 2.79385 11.7017 2.99464C11.7887 3.19544 11.8479 3.41587 11.8791 3.65595C11.9148 3.93532 11.9427 4.23323 11.9628 4.5497C11.9829 4.86617 11.9952 5.11389 11.9997 5.29286V6.44524C12.0041 7.07818 11.964 7.71111 11.8791 8.34405C11.8479 8.58413 11.7921 8.80129 11.7117 8.99554C11.6314 9.18978 11.56 9.32401 11.4975 9.39821L11.4037 9.50952C11.3412 9.575 11.2765 9.63284 11.2095 9.68304C11.1426 9.73323 11.0734 9.7747 11.002 9.80744C10.9305 9.84018 10.868 9.86746 10.8145 9.88929C10.7609 9.91111 10.6973 9.92857 10.6236 9.94167C10.55 9.95476 10.4964 9.96458 10.4629 9.97113C10.4294 9.97768 10.3781 9.98423 10.3089 9.99077C10.2397 9.99732 10.2029 10.0006 10.1984 10.0006C9.07795 10.0835 7.67849 10.125 6 10.125C5.07594 10.1163 4.27354 10.1021 3.59277 10.0824C2.912 10.0628 2.46448 10.0464 2.25021 10.0333L1.9221 10.0071L1.68104 9.98095C1.52034 9.95913 1.39869 9.9373 1.31611 9.91548C1.23352 9.89365 1.11969 9.84782 0.974611 9.77798C0.829529 9.70813 0.703421 9.61865 0.596284 9.50952C0.569499 9.48333 0.534903 9.44296 0.492495 9.38839C0.450086 9.33383 0.385358 9.20615 0.298309 9.00536C0.21126 8.80456 0.152112 8.58413 0.120864 8.34405C0.0851513 8.06468 0.0572514 7.76677 0.0371631 7.4503C0.0170748 7.13383 0.00479887 6.88611 0.000334809 6.70714V5.55476C-0.00412925 4.92182 0.0360467 4.28889 0.120864 3.65595C0.152112 3.41587 0.207912 3.19871 0.288265 3.00446C0.368618 2.81022 0.440042 2.67599 0.502539 2.60179L0.596284 2.49048C0.658781 2.425 0.723508 2.36716 0.790469 2.31696C0.85743 2.26677 0.926622 2.22421 0.998047 2.18929C1.06947 2.15436 1.13197 2.12599 1.18554 2.10417C1.23911 2.08234 1.30272 2.06488 1.37637 2.05179C1.45003 2.03869 1.50248 2.02887 1.53373 2.02232C1.56498 2.01577 1.61632 2.00923 1.68774 2.00268C1.75917 1.99613 1.79711 1.99286 1.80157 1.99286C2.92205 1.91429 4.32151 1.875 6 1.875Z" fill="#292929"></path></svg> </a>
 
             
             </div>
@@ -5901,7 +6260,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		</script>
 		<script id="gsc_widget_script-js" data-cfasync="false" async="" src="js/y7959m6w.js"></script>
 <script id="libs-script-js-extra">
-var team_ajax = {"url":"https://greybrook.com/wp-admin/admin-ajax.php"};
+var team_ajax = {"url":"#"};
 //# sourceURL=libs-script-js-extra
 </script>
 <script id="libs-script-js" src="js/scripts.min.js"></script>
