@@ -6034,7 +6034,7 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
       </div>
 
       
-        <a href="/firm-news" class="button button_black">All news</a>
+        <a href="#" class="button button_black">All news</a>
         
       
     </div>
@@ -6055,7 +6055,224 @@ CPI Capital identifies Multifamily Value-Add and Build-To-Rent Development oppor
     </div>
   </div>
 
+  <!-- ==================== OUR PARTNERS SECTION ==================== -->
+  <section class="cpi-partners-section" id="cpiPartners">
+    <style>
+      .cpi-partners-section {
+        position: relative;
+        width: 100%;
+        background: #f8fafc;
+        padding: 90px 0 100px 0;
+        overflow: hidden;
+        font-family: 'WorkSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        box-sizing: border-box;
+        border-top: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .cpi-partners-section *,
+      .cpi-partners-section *::before,
+      .cpi-partners-section *::after {
+        box-sizing: border-box;
+      }
+      .cpi-partners-header {
+        text-align: center;
+        max-width: 780px;
+        margin: 0 auto 50px auto;
+        padding: 0 24px;
+      }
+      .cpi-partners-badge {
+        display: inline-block;
+        font-size: 0.76rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #4A517F;
+        background: rgba(74, 81, 127, 0.08);
+        border: 1px solid rgba(74, 81, 127, 0.15);
+        padding: 6px 16px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+      }
+      .cpi-partners-title {
+        font-size: clamp(2rem, 3.2vw, 3rem);
+        font-weight: 700;
+        color: #1a1f36;
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin: 0 0 14px 0;
+      }
+      .cpi-partners-subtitle {
+        font-size: 1.05rem;
+        line-height: 1.6;
+        color: #64748b;
+        margin: 0;
+        font-weight: 400;
+      }
 
+      /* Marquee wrapper with gradient edge masks */
+      .cpi-partners-marquee {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        padding: 15px 0;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+
+      .cpi-partners-track {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: max-content;
+        animation: cpiPartnersScroll 26s linear infinite;
+        will-change: transform;
+      }
+
+      /* Hover: pause scrolling smoothly */
+      .cpi-partners-marquee:hover .cpi-partners-track,
+      .cpi-partners-track:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes cpiPartnersScroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* Individual Partner Logo Card */
+      .cpi-partner-card {
+        flex-shrink: 0;
+        width: 230px;
+        height: 100px;
+        background: #ffffff;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 16px 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 14px rgba(15, 23, 42, 0.03);
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        cursor: pointer;
+        position: relative;
+        user-select: none;
+      }
+
+      .cpi-partner-card:hover {
+        transform: translateY(-5px);
+        border-color: #4A517F;
+        background: #ffffff;
+        box-shadow: 0 16px 32px rgba(74, 81, 127, 0.12), 0 0 0 1px rgba(74, 81, 127, 0.2);
+      }
+
+      .cpi-partner-logo {
+        max-width: 165px;
+        max-height: 52px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: grayscale(30%);
+        opacity: 0.85;
+        transition: all 0.3s ease;
+      }
+
+      .cpi-partner-card:hover .cpi-partner-logo {
+        filter: grayscale(0%);
+        opacity: 1;
+        transform: scale(1.06);
+      }
+
+      @media (max-width: 768px) {
+        .cpi-partners-section {
+          padding: 60px 0 70px 0;
+        }
+        .cpi-partners-header {
+          margin-bottom: 35px;
+        }
+        .cpi-partner-card {
+          width: 190px;
+          height: 86px;
+          padding: 12px 20px;
+        }
+        .cpi-partner-logo {
+          max-width: 135px;
+          max-height: 44px;
+        }
+        .cpi-partners-track {
+          gap: 20px;
+          animation-duration: 20s;
+        }
+      }
+    </style>
+
+    <div class="cpi-partners-header">
+      <div class="cpi-partners-badge">Strategic Alliances</div>
+      <h2 class="cpi-partners-title">Our Partners</h2>
+      <p class="cpi-partners-subtitle">
+        Collaborating with premier legal, accounting, tax, and advisory institutions to ensure institutional-grade execution.
+      </p>
+    </div>
+
+    <!-- Infinite Auto-Scrolling Logo Marquee -->
+    <div class="cpi-partners-marquee" aria-label="Our Trusted Partners Carousel">
+      <div class="cpi-partners-track">
+        <!-- Set 1 -->
+        <div class="cpi-partner-card" title="Kelley | Clarke PC - Trusted Legal Advisors">
+          <img src="images/partners/KK-logo-300x47.png" alt="Kelley Clarke PC" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="REIN - Trusted Partner">
+          <img src="images/partners/Trusted-Partners-300x82.png" alt="REIN Trusted Partner" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Cain Lamarre">
+          <img src="images/partners/cain.png" alt="Cain Lamarre" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="MNP LLP">
+          <img src="images/partners/mnp-llp-logo-300x105.jpg" alt="MNP LLP" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Smythe CPA">
+          <img src="images/partners/smythecpa-logo-300x118.jpg" alt="Smythe CPA" class="cpi-partner-logo" loading="lazy">
+        </div>
+
+        <!-- Set 2 (Duplicate for Seamless Infinite Loop) -->
+        <div class="cpi-partner-card" title="Kelley | Clarke PC - Trusted Legal Advisors">
+          <img src="images/partners/KK-logo-300x47.png" alt="Kelley Clarke PC" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="REIN - Trusted Partner">
+          <img src="images/partners/Trusted-Partners-300x82.png" alt="REIN Trusted Partner" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Cain Lamarre">
+          <img src="images/partners/cain.png" alt="Cain Lamarre" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="MNP LLP">
+          <img src="images/partners/mnp-llp-logo-300x105.jpg" alt="MNP LLP" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Smythe CPA">
+          <img src="images/partners/smythecpa-logo-300x118.jpg" alt="Smythe CPA" class="cpi-partner-logo" loading="lazy">
+        </div>
+
+        <!-- Set 3 (Duplicate for Wide Screens) -->
+        <div class="cpi-partner-card" title="Kelley | Clarke PC - Trusted Legal Advisors">
+          <img src="images/partners/KK-logo-300x47.png" alt="Kelley Clarke PC" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="REIN - Trusted Partner">
+          <img src="images/partners/Trusted-Partners-300x82.png" alt="REIN Trusted Partner" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Cain Lamarre">
+          <img src="images/partners/cain.png" alt="Cain Lamarre" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="MNP LLP">
+          <img src="images/partners/mnp-llp-logo-300x105.jpg" alt="MNP LLP" class="cpi-partner-logo" loading="lazy">
+        </div>
+        <div class="cpi-partner-card" title="Smythe CPA">
+          <img src="images/partners/smythecpa-logo-300x118.jpg" alt="Smythe CPA" class="cpi-partner-logo" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
 
 <footer data-scroll="footer" id="footer" class="footer cpi-enhanced-footer">
   <!-- Tinted Blurry Backdrop Layers -->
